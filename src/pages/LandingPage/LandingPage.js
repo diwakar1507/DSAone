@@ -12,6 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
   // Refs
+  const meteoRef = useRef(null);
   const topbarRef = useRef(null);
   const dsaRef = useRef(null);
   const lineRef = useRef(null);
@@ -26,117 +27,140 @@ const LandingPage = () => {
     gsap.to(topbarRef.current, {
       scrollTrigger: {
         trigger: topbarRef.current,
-        start: 'top 0%',
+        start: "top 0%",
         scrub: true,
       },
       delay: 0.6,
       duration: 0.3,
-      y : -50,
-      opacity:0,
+      y: -50,
+      opacity: 0,
     });
 
     gsap.to(dsaRef.current, {
       scrollTrigger: {
         trigger: dsaRef.current,
-        start: 'center 5%',
+        start: "center 5%",
         scrub: true,
       },
-      x:10,
+      x: 10,
       duration: 0.6,
       ease: "Power1.out",
-      opacity:0,
+      opacity: 0,
     });
 
     gsap.to(lineRef.current, {
       scrollTrigger: {
         trigger: lineRef.current,
-        start: 'center 5%',
+        start: "center 5%",
         scrub: true,
       },
-      x:10,
+      x: 10,
       duration: 0.6,
       ease: "Power1.out",
-      opacity:0,
+      opacity: 0,
     });
 
     gsap.to(oneRef.current, {
       scrollTrigger: {
         trigger: oneRef.current,
-        start: 'center 40%',
+        start: "center 40%",
         scrub: true,
       },
       duration: 0.3,
-      y : -60,
-      opacity:0,
+      y: -60,
+      opacity: 0,
     });
 
     gsap.to(learnRef.current, {
       scrollTrigger: {
         trigger: learnRef.current,
-        start: 'center 50%',
+        start: "center 50%",
         scrub: true,
       },
       duration: 0.2,
-      x : 60,
-      opacity:0,
+      x: 60,
+      opacity: 0,
       ease: "Power1.out",
     });
 
     gsap.to(backRef.current, {
       scrollTrigger: {
         trigger: backRef.current,
-        start: 'top 15%',
+        start: "top 15%",
         scrub: true,
       },
       duration: 1,
-      y : 300,
+      y: 300,
     });
 
     gsap.to(moonRef.current, {
       scrollTrigger: {
         trigger: moonRef.current,
-        start: 'center 75%',
+        start: "center 75%",
         scrub: true,
       },
       duration: 1.4,
-      y : 200,
+      y: 200,
       ease: "Power1.out",
     });
 
     gsap.to(middleRef.current, {
       scrollTrigger: {
         trigger: middleRef.current,
-        start: 'top 5%',
+        start: "top 5%",
         scrub: true,
       },
       duration: 2,
-      y : 160,
+      y: 160,
       ease: "Power1.out",
     });
-    
+
     gsap.to(frontRef.current, {
       scrollTrigger: {
         trigger: frontRef.current,
-        start: 'top 20%',
+        start: "top 20%",
         scrub: true,
       },
       duration: 2,
-      y : 20,
+      y: 20,
       ease: "Power1.out",
     });
   }, []);
 
   useEffect(() => {
-    scrollAnimations()
-    return () => {
+    scrollAnimations();
+    return () => {};
+  }, [scrollAnimations]);
 
+  useEffect(() => {
+    meteors()
+    return () => {
+      
     }
-  }, [scrollAnimations])
+  }, [])
+
+  const meteors = () => {
+    let amount = 20;
+    let i=0;
+    while (i<amount) {
+      let meteor = document.createElement('i');
+      let size = Math.random() * 5;
+      let posX = Math.floor(Math.random() * window.innerWidth);
+      let delay = Math.random() * -20;
+
+      meteor.style.width = 0.2 + size +'px';
+      meteor.style.left = posX + 'px';
+      meteor.style.animationDelay = delay + 's';
+      meteoRef.current.appendChild(meteor);
+      i++;
+    }
+  }
 
   return (
     <div className="text-l text-[#D1D1D1]">
       <div className="bg-[#637D97] h-screen w-screen relative">
-        <div className="w-full h-8 pt-6 absolute" ref={topbarRef}>
+        <div className="absolute w-full h-full z-0 skew-x-12" ref={meteoRef}></div>
+        <div className="w-full h-8 pt-6 absolute mix-blend-screen" ref={topbarRef}>
           <div className="flex">
             <div className="basis-1/2 flex">
               <div className="pl-24 basis-1/4">
@@ -219,15 +243,15 @@ const LandingPage = () => {
           <div className="text-9xl z-50" ref={dsaRef}>
             DSA
           </div>
-          <div className="z-50" ref={lineRef}>
+          <div className="z-50 mix-blend-screen" ref={lineRef}>
             <svg height="2" width="350">
               <line x1="25" x2="300" stroke="#b6b6b6" stroke-width="4" />
             </svg>
           </div>
-          <div className="text-7xl ml-28 z-20" ref={oneRef}>
+          <div className="text-7xl ml-28 z-20 mix-blend-screen" ref={oneRef}>
             one
           </div>
-          <div className="text-3xl ml-11 mt-5" ref={learnRef}>
+          <div className="text-3xl ml-11 mt-5 mix-blend-screen" ref={learnRef}>
             Learn By Fun...
           </div>
         </div>
@@ -254,7 +278,6 @@ const LandingPage = () => {
             <img
               className=" absolute w-full h-full bottom-6 left-0 object-cover "
               src={hillFront}
-
               alt="Hill"
             />
           </div>
