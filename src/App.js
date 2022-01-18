@@ -1,10 +1,12 @@
-import './App.css';
+import "./App.css";
+import SmoothScroll from "./Components/SmoothScroll";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <SmoothScroll>
+      <LandingPage />
+    </SmoothScroll>
   );
 }
 

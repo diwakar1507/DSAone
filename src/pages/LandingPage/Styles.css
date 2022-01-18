@@ -1,0 +1,30 @@
+.main-Container {
+    font-size: x-large;
+    color: #D1D1D1;
+}
+.section-1 {
+    background-color: #637D97;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
+.topbar {
+    /* background-color: aliceblue; */
+    width: 100%;
+    height: 4vh;
+    padding-top: 3vh;
+}
+.topbar-container {
+    display: flex;
+    justify-content: space-between;
+}
+.sidebar {
+    padding-left: 5vw;
+}
+.midNav {
+    border-width: 2px;
+    border: linen;
+}
+.search {
+    padding-right: 6vw;
+}
