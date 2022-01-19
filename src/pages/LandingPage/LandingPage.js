@@ -1,17 +1,19 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import { useWindowSize } from "../../hooks/useWindowSize";
 import "./Styles.css";
 import hillBack from "../../img/Landing Page/Section 1/Hills/Hill Back.svg";
 import hillMiddle from "../../img/Landing Page/Section 1/Hills/Hill Middle.svg";
 import hillFront from "../../img/Landing Page/Section 1/Hills/Hill Front.svg";
 import Moon from "../../img/Landing Page/Section 1/Moon.svg";
+import illustration1 from "../../img/Landing Page/Section 2/Illustration.svg";
+import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
+import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const LandingPage = () => {
-  // Refs
+  // Section1 Refs
   const meteoRef = useRef(null);
   const topbarRef = useRef(null);
   const dsaRef = useRef(null);
@@ -22,6 +24,12 @@ const LandingPage = () => {
   const moonRef = useRef(null);
   const middleRef = useRef(null);
   const frontRef = useRef(null);
+
+  // Section2 Refs
+
+  // Section3 Refs
+
+  // Section4 Refs
 
   const scrollAnimations = useCallback(() => {
     gsap.to(topbarRef.current, {
@@ -89,8 +97,8 @@ const LandingPage = () => {
         start: "top 15%",
         scrub: true,
       },
-      duration: 1,
-      y: 300,
+      duration: 2,
+      y: 330,
     });
 
     gsap.to(moonRef.current, {
@@ -133,34 +141,36 @@ const LandingPage = () => {
   }, [scrollAnimations]);
 
   useEffect(() => {
-    meteors()
-    return () => {
-      
-    }
-  }, [])
+    meteors();
+    return () => {};
+  }, []);
 
   const meteors = () => {
     let amount = 20;
-    let i=0;
-    while (i<amount) {
-      let meteor = document.createElement('i');
+    let i = 0;
+    while (i < amount) {
+      let meteor = document.createElement("i");
       let size = Math.random() * 5;
       let posX = Math.floor(Math.random() * window.innerWidth);
       let delay = Math.random() * -20;
 
-      meteor.style.width = 0.2 + size +'px';
-      meteor.style.left = posX + 'px';
-      meteor.style.animationDelay = delay + 's';
+      meteor.style.width = 0.2 + size + "px";
+      meteor.style.left = posX + "px";
+      meteor.style.animationDelay = delay + "s";
       meteoRef.current.appendChild(meteor);
       i++;
     }
-  }
+  };
 
   return (
     <div className="text-l text-[#D1D1D1]">
       <div className="bg-[#637D97] h-screen w-screen relative">
-        <div className="absolute w-full h-full z-0 skew-x-12" ref={meteoRef}></div>
-        <div className="w-full h-8 pt-6 absolute mix-blend-screen" ref={topbarRef}>
+        <div
+          className="absolute w-full h-full z-0 skew-x-12"
+          ref={meteoRef}></div>
+        <div
+          className="w-full h-8 pt-6 absolute mix-blend-screen"
+          ref={topbarRef}>
           <div className="flex">
             <div className="basis-1/2 flex">
               <div className="pl-24 basis-1/4">
@@ -283,7 +293,83 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative"></div>
+      <div className="bg-[#041C32] h-screen w-screen relative">
+        <div className="flex h-full w-full">
+          <div className="basis-1/2 relative">
+            <img
+              src={illustration1}
+              alt="Illustration"
+              className="absolute w-9/12 bottom-24 left-24 object-cover"
+            />
+          </div>
+          <div className="basis-1/2 relative">
+            <div className="absolute w-full h-3/4 top-24 flex flex-col">
+              <div className="text-9xl pt-4 pl-24">DATA</div>
+              <div className="text-7xl self-end p-4 pr-24">STRUCTURE</div>
+              <div className=" w-3/4 self-center p-4 text-xl">
+                Data Structure is a way to store and organize data so that it
+                can be used efficiently. Our Data Structure tutorial includes
+                all important topics of Data Structure such as Array, Trees,
+                Linked List, Stack, Queue, Graph etc.
+              </div>
+              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32">
+                Learn More
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#041C32] h-screen w-screen relative">
+        <div className="flex h-full w-full">
+          <div className="basis-1/2 relative">
+            <div className="absolute w-full h-3/4 top-24 flex flex-col">
+              <div className="text-8xl pt-4 pl-24">ALGORITHM</div>
+              <div className=" w-3/4 self-center p-4 text-xl">
+                Algorithm is a collection of steps to solve a particular
+                problem. Our Algorithm tutorial includes mostly used algorithm
+                design techniques such as Greedy, Divide & Conquer, Dynamic
+                programming, Backtracking etc.
+              </div>
+              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-start ml-28 mt-5">
+                Learn More
+              </div>
+            </div>
+          </div>
+          <div className="basis-1/2 relative">
+            <img
+              src={illustration2}
+              alt="Illustration"
+              className="absolute w-9/12 bottom-24 left-24 object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#041C32] h-screen w-screen relative">
+        <div className="flex h-full w-full">
+          <div className="basis-1/2 relative">
+            <img
+              src={illustration3}
+              alt="Illustration"
+              className="absolute w-9/12 top-24 left-24 object-cover"
+            />
+          </div>
+          <div className="basis-1/2 relative">
+            <div className="absolute w-full h-3/4 top-24 flex flex-col">
+              <div className="text-9xl pt-4 pl-24">ABOUT</div>
+              <div className="text-7xl self-end p-4 pr-24">PROJECT</div>
+              <div className=" w-3/4 self-center p-4 text-xl">
+                Data Structure is a way to store and organize data so that it
+                can be used efficiently. Our Data Structure tutorial includes
+                all important topics of Data Structure such as Array, Trees,
+                Linked List, Stack, Queue, Graph etc.
+              </div>
+              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32">
+                Visit Github
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
