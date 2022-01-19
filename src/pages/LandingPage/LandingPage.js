@@ -9,6 +9,7 @@ import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
+import { Link as SLink } from 'react-scroll';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -164,91 +165,91 @@ const LandingPage = () => {
 
   return (
     <div className="text-l text-[#D1D1D1]">
-      <div className="bg-[#637D97] h-screen w-screen relative">
+      <div
+        className="w-full h-8 pt-6 absolute mix-blend-screen z-50 cursor-pointer select-none"
+        ref={topbarRef}>
+        <div className="flex">
+          <div className="basis-1/2 flex">
+            <div className="pl-24 basis-1/4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="30"
+                height="19"
+                viewBox="0 0 32 19">
+                <g transform="translate(-96 -50)">
+                  <g
+                    transform="translate(96 50)"
+                    fill="#d1d1d1"
+                    stroke="#d1d1d1"
+                    stroke-width="1">
+                    <rect width="14" height="3" rx="1.5" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="13"
+                      height="2"
+                      rx="1"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    transform="translate(96 58)"
+                    fill="#d1d1d1"
+                    stroke="#d1d1d1"
+                    stroke-width="1">
+                    <rect width="32" height="3" rx="1.5" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="31"
+                      height="2"
+                      rx="1"
+                      fill="none"
+                    />
+                  </g>
+                  <g
+                    transform="translate(114 66)"
+                    fill="#d1d1d1"
+                    stroke="#d1d1d1"
+                    stroke-width="1">
+                    <rect width="14" height="3" rx="1.5" stroke="none" />
+                    <rect
+                      x="0.5"
+                      y="0.5"
+                      width="13"
+                      height="2"
+                      rx="1"
+                      fill="none"
+                    />
+                  </g>
+                </g>
+              </svg>
+            </div>
+            <div className="flex pl-28 justify-around basis-3/4">
+              <SLink to="data" smooth={true} duration={700}><div>DataStructures</div></SLink>
+              <SLink to="algorithm" smooth={true} duration={1400}><div>Algorithm</div></SLink>
+              <SLink to="about" smooth={true} duration={2100}><div>About</div></SLink>
+            </div>
+          </div>
+          <div className="basis-1/2 flex justify-end pr-28">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30.849"
+              height="30.848"
+              viewBox="0 0 30.849 30.848">
+              <path
+                d="M32.463,28.179l-7.307-6.215A3.261,3.261,0,0,0,22.94,21,11.57,11.57,0,1,0,21.645,22.3a3.261,3.261,0,0,0,.962,2.216l6.215,7.307a2.592,2.592,0,1,0,3.641-3.641ZM14.139,21.208A7.712,7.712,0,1,1,21.851,13.5a7.712,7.712,0,0,1-7.712,7.712Z"
+                transform="translate(-2.571 -1.928)"
+                fill="#d1d1d1"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div className="bg-[#637D97] h-screen w-screen relative" id="main">
         <div
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
-        <div
-          className="w-full h-8 pt-6 absolute mix-blend-screen"
-          ref={topbarRef}>
-          <div className="flex">
-            <div className="basis-1/2 flex">
-              <div className="pl-24 basis-1/4">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="19"
-                  viewBox="0 0 32 19">
-                  <g transform="translate(-96 -50)">
-                    <g
-                      transform="translate(96 50)"
-                      fill="#d1d1d1"
-                      stroke="#d1d1d1"
-                      stroke-width="1">
-                      <rect width="14" height="3" rx="1.5" stroke="none" />
-                      <rect
-                        x="0.5"
-                        y="0.5"
-                        width="13"
-                        height="2"
-                        rx="1"
-                        fill="none"
-                      />
-                    </g>
-                    <g
-                      transform="translate(96 58)"
-                      fill="#d1d1d1"
-                      stroke="#d1d1d1"
-                      stroke-width="1">
-                      <rect width="32" height="3" rx="1.5" stroke="none" />
-                      <rect
-                        x="0.5"
-                        y="0.5"
-                        width="31"
-                        height="2"
-                        rx="1"
-                        fill="none"
-                      />
-                    </g>
-                    <g
-                      transform="translate(114 66)"
-                      fill="#d1d1d1"
-                      stroke="#d1d1d1"
-                      stroke-width="1">
-                      <rect width="14" height="3" rx="1.5" stroke="none" />
-                      <rect
-                        x="0.5"
-                        y="0.5"
-                        width="13"
-                        height="2"
-                        rx="1"
-                        fill="none"
-                      />
-                    </g>
-                  </g>
-                </svg>
-              </div>
-              <div className="flex pl-28 justify-around basis-3/4">
-                <div>DataStructures</div>
-                <div>Algorithm</div>
-                <div>About</div>
-              </div>
-            </div>
-            <div className="basis-1/2 flex justify-end pr-28">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30.849"
-                height="30.848"
-                viewBox="0 0 30.849 30.848">
-                <path
-                  d="M32.463,28.179l-7.307-6.215A3.261,3.261,0,0,0,22.94,21,11.57,11.57,0,1,0,21.645,22.3a3.261,3.261,0,0,0,.962,2.216l6.215,7.307a2.592,2.592,0,1,0,3.641-3.641ZM14.139,21.208A7.712,7.712,0,1,1,21.851,13.5a7.712,7.712,0,0,1-7.712,7.712Z"
-                  transform="translate(-2.571 -1.928)"
-                  fill="#d1d1d1"
-                />
-              </svg>
-            </div>
-          </div>
-        </div>
         <div className="absolute h-1/3 w-3/12 left-56 top-36">
           <div className="text-9xl z-50" ref={dsaRef}>
             DSA
@@ -293,7 +294,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative">
+      <div className="bg-[#041C32] h-screen w-screen relative" id="data">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative">
             <img
@@ -312,14 +313,14 @@ const LandingPage = () => {
                 all important topics of Data Structure such as Array, Trees,
                 Linked List, Stack, Queue, Graph etc.
               </div>
-              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32">
+              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32 cursor-pointer">
                 Learn More
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative">
+      <div className="bg-[#041C32] h-screen w-screen relative" id="algorithm">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative">
             <div className="absolute w-full h-3/4 top-24 flex flex-col">
@@ -330,7 +331,7 @@ const LandingPage = () => {
                 design techniques such as Greedy, Divide & Conquer, Dynamic
                 programming, Backtracking etc.
               </div>
-              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-start ml-28 mt-5">
+              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-start ml-28 mt-5 cursor-pointer">
                 Learn More
               </div>
             </div>
@@ -344,7 +345,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative">
+      <div className="bg-[#041C32] h-screen w-screen relative" id="about">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative">
             <img
@@ -363,7 +364,11 @@ const LandingPage = () => {
                 all important topics of Data Structure such as Array, Trees,
                 Linked List, Stack, Queue, Graph etc.
               </div>
-              <div className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32">
+              <div
+                className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                onClick={() => {
+                  window.location.href = "https://www.google.com/";
+                }}>
                 Visit Github
               </div>
             </div>
