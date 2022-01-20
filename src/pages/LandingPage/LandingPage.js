@@ -441,7 +441,7 @@ const LandingPage = () => {
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
         <div className="absolute h-1/3 w-3/12 left-56 top-36">
-          <div className="text-9xl z-50" ref={dsaRef}>
+          <div className="text-9xl z-50 mix-blend-screen" ref={dsaRef}>
             DSA
           </div>
           <div className="z-50 mix-blend-screen" ref={lineRef}>
@@ -521,7 +521,9 @@ const LandingPage = () => {
               <div className="text-8xl pt-4 pl-24" ref={Heading2Ref}>
                 ALGORITHM
               </div>
-              <div className=" w-3/4 self-center p-4 mt-8 text-xl" ref={Data2Ref}>
+              <div
+                className=" w-3/4 self-center p-4 mt-8 text-xl"
+                ref={Data2Ref}>
                 Algorithm is a collection of steps to solve a particular
                 problem. Our Algorithm tutorial includes mostly used algorithm
                 design techniques such as Greedy, Divide & Conquer, Dynamic
@@ -544,7 +546,7 @@ const LandingPage = () => {
         </div>
       </div>
       <div className="bg-[#041C32] h-screen w-screen relative" id="about">
-        <div className="flex h-full w-full">
+        <div className="flex h-3/4 w-full">
           <div className="basis-1/2 relative" ref={illustration3Ref}>
             <img
               src={illustration3}
@@ -573,6 +575,96 @@ const LandingPage = () => {
                 Visit Github
               </div>
             </div>
+          </div>
+        </div>
+        <div className="h-1/4 w-full">
+          <div className="marquee mt-8">
+            <ul className="scroll-track scroll1 list-none h-full flex">
+              <li>Array</li>
+              <li>Tree</li>
+              <li>Quick</li>
+              <li>Sort</li>
+              <li>Merge</li>
+              <li>Sort</li>
+              <li>Algo</li>
+              <li>Linked</li>
+              <li>List</li>
+              <li>Matrix</li>
+              <li>Graph</li>
+              <li>DFS</li>
+              <li>BFS</li>
+              <li>A-star</li>
+              <li>Strassen</li>
+              <li>Dijkstra</li>
+              <li>Node</li>
+              <li>Path</li>
+              <li>Root</li>
+              <li>n-Queen</li>
+              <li>Array</li>
+              <li>Tree</li>
+              <li>Quick</li>
+              <li>Sort</li>
+              <li>Merge</li>
+              <li>Sort</li>
+              <li>Algo</li>
+              <li>Linked</li>
+              <li>List</li>
+              <li>Matrix</li>
+              <li>Graph</li>
+              <li>DFS</li>
+              <li>BFS</li>
+              <li>A-star</li>
+              <li>Strassen</li>
+              <li>Dijkstra</li>
+              <li>Node</li>
+              <li>Path</li>
+              <li>Root</li>
+              <li>n-Queen</li>
+            </ul>
+          </div>
+          <div className="marquee mt-4">
+            <ul className="scroll-track scroll2 list-none h-full flex">
+              <li>Data</li>
+              <li>Structure</li>
+              <li>Priority</li>
+              <li>Queue</li>
+              <li>Stack</li>
+              <li>Heap</li>
+              <li>RSA</li>
+              <li>DFT</li>
+              <li>FFT</li>
+              <li>Spanning</li>
+              <li>Prims</li>
+              <li>Kruskal</li>
+              <li>Duality</li>
+              <li>Fibonacci</li>
+              <li>Prime</li>
+              <li>Radix</li>
+              <li>Hash</li>
+              <li>Table</li>
+              <li>LCS</li>
+              <li>Huffman</li>
+              <li>Data</li>
+              <li>Structure</li>
+              <li>Priority</li>
+              <li>Queue</li>
+              <li>Stack</li>
+              <li>Heap</li>
+              <li>RSA</li>
+              <li>DFT</li>
+              <li>FFT</li>
+              <li>Spanning</li>
+              <li>Prims</li>
+              <li>Kruskal</li>
+              <li>Duality</li>
+              <li>Fibonacci</li>
+              <li>Prime</li>
+              <li>Radix</li>
+              <li>Hash</li>
+              <li>Table</li>
+              <li>LCS</li>
+              <li>Huffman</li>
+            </ul>
           </div>
         </div>
       </div>
