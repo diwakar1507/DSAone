@@ -348,7 +348,7 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="text-l text-[#D1D1D1]">
+    <div className="text-l text-gray82">
       <div
         className="w-full h-8 pt-6 absolute mix-blend-screen z-50 cursor-pointer select-none"
         ref={topbarRef}>
@@ -436,7 +436,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#637D97] h-screen w-screen relative" id="main">
+      <div className="bg-horizon h-screen w-screen relative" id="main">
         <div
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
@@ -484,7 +484,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative" id="data">
+      <div className="bg-dark-green h-screen w-screen relative" id="data">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative" ref={illustration1Ref}>
             <img
@@ -506,7 +506,7 @@ const LandingPage = () => {
                 Linked List, Stack, Queue, Graph etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-end mr-32 cursor-pointer"
                 ref={Button1Ref}>
                 Learn More
               </div>
@@ -514,7 +514,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative" id="algorithm">
+      <div className="bg-dark-green h-screen w-screen relative" id="algorithm">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative" ref={Container2Ref}>
             <div className="absolute w-full h-3/4 top-44 flex flex-col">
@@ -530,7 +530,7 @@ const LandingPage = () => {
                 programming, Backtracking etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
                 ref={Button2Ref}>
                 Learn More
               </div>
@@ -545,7 +545,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#041C32] h-screen w-screen relative" id="about">
+      <div className="bg-dark-green h-screen w-screen relative" id="about">
         <div className="flex h-3/4 w-full">
           <div className="basis-1/2 relative" ref={illustration3Ref}>
             <img
@@ -567,7 +567,7 @@ const LandingPage = () => {
                 Linked List, Stack, Queue, Graph etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-[#FFDD00] text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-end mr-32 cursor-pointer"
                 onClick={() => {
                   window.location.href = "https://www.google.com/";
                 }}
