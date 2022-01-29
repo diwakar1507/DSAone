@@ -10,6 +10,7 @@ import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { Link as SLink } from "react-scroll";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -505,11 +506,15 @@ const LandingPage = () => {
                 all important topics of Data Structure such as Array, Trees,
                 Linked List, Stack, Queue, Graph etc.
               </div>
-              <div
-                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-end mr-32 cursor-pointer"
-                ref={Button1Ref}>
-                Learn More
-              </div>
+              <Link
+                className="self-end mr-32 cursor-pointer"
+                to="/DataStructure">
+                <div
+                  className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl "
+                  ref={Button1Ref}>
+                  Learn More
+                </div>
+              </Link>
             </div>
           </div>
         </div>
@@ -577,8 +582,8 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="h-1/4 w-full">
-          <div className="marquee mt-8">
+        <div className="bg-dark-green h-1/4 w-full pt-8">
+          <div className="marquee mt-10">
             <ul className="scroll-track scroll1 list-none h-full flex">
               <li>Array</li>
               <li>Tree</li>

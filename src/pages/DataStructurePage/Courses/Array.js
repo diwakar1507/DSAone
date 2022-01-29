@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useCallback } from "react";
-import representation from "../../img/DataStructure/Array/Array.svg";
+import representation from "../../../img/DataStructure/Array/Array.svg";
 import { gsap } from "gsap";
 
-const Array = () => {
+const ArrayDS = () => {
   const HeadingRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -28,13 +28,13 @@ const Array = () => {
   }, []);
 
   return (
-    <div className="text-l text-gray82 ">
-      <div className="bg-dark-green w-screen relative">
-        <div className="p-12 ml-14 text-8xl" ref={HeadingRef}>
+    <div className="text-l text-gray82 pb-28">
+      <div className="bg-dark-green w-full relative">
+        <div className="p-12 pb-8 text-8xl" ref={HeadingRef}>
           Array
         </div>
-        <div className="pl-28 pr-28 pb-10" ref={containerRef}>
-          <p className="text-xl mt-5">Introduction</p>
+        <div className="pl-16 pr-28 pb-10" ref={containerRef}>
+          <p className="text-xl">Introduction</p>
           <p>
             <span className="text-xl">A</span>n array is a collection of items
             stored at contiguous memory locations. The idea is to store multiple
@@ -135,4 +135,4 @@ const Array = () => {
   );
 };
 
-export default Array;
+export default ArrayDS;
