@@ -10,7 +10,8 @@ const MainDS = () => {
         <Link to={`/`}>DSA one</Link>
       </div>
       <div className="flex h-full">
-        <div className="border-r-2 border-stone-700 w-1/6 h-full p-4 pt-10 overflow-x-auto shrink-0">
+        <div className="border-r-2 border-stone-700 w-1/6 h-full p-4 overflow-x-auto shrink-0">
+          <div className="text-xl pb-4">Data Structures</div>
           {Courses.map((course) => (
             <Link
               className="ml-6"
