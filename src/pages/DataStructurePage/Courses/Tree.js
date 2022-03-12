@@ -69,7 +69,7 @@ const TreeDs = () => {
             <div className="bg-slate-800 overflow-hidden pb-24">
                 <div className="flex">
                     <div className="block">
-                        <div className="text-9xl text-yellow-200 py-9 font-display " ref={headingRef}> TREE </div>
+                        <div className="text-8xl text-yellow-200 py-9 font-display " ref={headingRef}> TREE </div>
                         <div className="px-10  py-10 h-1/2" ref={StackRef}>
                             <div className="text-5xl w-3/4 text-white font-serif font-bold h-fit"> Let's learn about <br />Tree it will be fun........ </div>
                         </div>
