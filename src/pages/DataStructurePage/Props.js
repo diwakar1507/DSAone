@@ -27,6 +27,10 @@ let Props = [
     index: 7,
     img: "-translate-y-10"
   },
+  {
+    index: 8,
+    img: "-translate-y-16 translate-x-4"
+  }
 ];
 
 export function getStyle(number) {

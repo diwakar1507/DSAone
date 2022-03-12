@@ -60,7 +60,8 @@ let Courses = [
     {
       name: "Graph",
       index: 8,
-      page: GraphDS
+      page: GraphDS,
+      img: BSTCard
     },
   ];
   
