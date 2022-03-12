@@ -7,6 +7,7 @@ import Moon from "../../img/Landing Page/Section 1/Moon.svg";
 import illustration1 from "../../img/Landing Page/Section 2/Illustration.svg";
 import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
+import BackToTop from "../../img/Landing Page/BackToTop.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { Link as SLink } from "react-scroll";
@@ -26,7 +27,7 @@ const LandingPage = () => {
   const moonRef = useRef(null);
   const middleRef = useRef(null);
   const frontRef = useRef(null);
-
+  const image = useRef(null);
   // Section2 Refs
   const illustration1Ref = useRef(null);
   const Container1Ref = useRef(null);
@@ -308,11 +309,14 @@ const LandingPage = () => {
       duration: 0.6,
       ease: "Power2.out",
     });
+    
+  
 
-    gsap.from(Data3Ref.current, {
+    gsap.to(Data3Ref.current, {
       scrollTrigger: {
         trigger: Data3Ref.current,
         start: "top 75%",
+
       },
       opacity: 0,
       delay: 0.8,
@@ -322,13 +326,14 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
+    
     scrollAnimations();
-    return () => {};
+    return () => { };
   }, [scrollAnimations]);
 
   useEffect(() => {
     meteors();
-    return () => {};
+    return () => { };
   }, []);
 
   const meteors = () => {
@@ -349,7 +354,14 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="text-l text-gray82">
+    <div className="text-l relative z-20 text-gray82" id="top">
+
+      <SLink to="top" smooth={true} duration={700}>
+        <span className="text-xl bottom-8 fixed z-10 text-center opacity-0  left-0 bg-grey-900 cursor-pointer w-24 ml-5" ref={image}>
+          <img  src={BackToTop} />
+        </span>
+      </SLink>
+
       <div
         className="w-full h-8 pt-6 absolute mix-blend-screen z-50 cursor-pointer select-none"
         ref={topbarRef}>
