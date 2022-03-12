@@ -9,9 +9,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const LinkedListDs = () => {
 
-
-
-
   return (
     <>
       <div className="bg-slate-800 overflow-hidden pb-24">
