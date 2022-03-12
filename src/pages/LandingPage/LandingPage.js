@@ -422,7 +422,7 @@ const LandingPage = () => {
                 </g>
               </svg>
             </div>
-            <div className="flex pl-28 justify-around basis-3/4">
+            <div className="flex text-orange-300 text-xl pl-28 justify-around basis-3/4">
               <SLink to="data" smooth={true} duration={700}>
                 <div>DataStructures</div>
               </SLink>
@@ -454,7 +454,7 @@ const LandingPage = () => {
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
         <div className="absolute h-1/3 w-3/12 left-56 top-36">
-          <div className="text-plain-white text-9xl z-50 mix-blend-screen" ref={dsaRef}>
+          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-700 to-orange-400 text-9xl z-50 mix-blend-screen" ref={dsaRef}>
             DSA
           </div>
           <div className="z-50 mix-blend-screen" ref={lineRef}>
@@ -462,10 +462,10 @@ const LandingPage = () => {
               <line x1="25" x2="300" stroke="#b6b6b6" strokeWidth="4" />
             </svg>
           </div>
-          <div className="text-7xl ml-28 z-20 mix-blend-screen" ref={oneRef}>
+          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-7xl ml-28 z-20 mix-blend-screen" ref={oneRef}>
             one
           </div>
-          <div className="text-3xl ml-11 mt-5 mix-blend-screen" ref={learnRef}>
+          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-3xl ml-11 mt-5 mix-blend-screen" ref={learnRef}>
             Learn By Fun...
           </div>
         </div>
@@ -522,7 +522,7 @@ const LandingPage = () => {
                 className="self-end mr-32 cursor-pointer"
                 to="/DataStructure">
                 <div
-                  className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl "
+                  className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl "
                   ref={Button1Ref}>
                   Learn More
                 </div>
@@ -547,7 +547,7 @@ const LandingPage = () => {
                 programming, Backtracking etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-start ml-28 mt-8 cursor-pointer"
                 ref={Button2Ref}>
                 Learn More
               </div>
@@ -584,7 +584,7 @@ const LandingPage = () => {
                 Linked List, Stack, Queue, Graph etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-end mr-32 cursor-pointer"
                 onClick={() => {
                   window.location.href = "https://www.google.com/";
                 }}
