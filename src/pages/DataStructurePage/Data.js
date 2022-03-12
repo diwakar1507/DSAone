@@ -5,6 +5,7 @@ import StackDS from "./Courses/Stack";
 import QueueDS from "./Courses/Queue";
 import BSTDS from "./Courses/BST";
 import HeapDS from "./Courses/Heap";
+import GraphDS from "./Courses/Graph";
 let Courses = [
     {
       name: "Array",
@@ -40,6 +41,11 @@ let Courses = [
       name: "Heap",
       index: 7,
       page: HeapDS
+    },
+    {
+      name: "Graph",
+      index: 8,
+      page: GraphDS
     },
   ];
   
