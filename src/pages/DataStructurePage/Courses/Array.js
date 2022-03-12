@@ -24,7 +24,7 @@ const ArrayDS = () => {
 
   useEffect(() => {
     Animations();
-    return () => {};
+    return () => { };
   }, []);
 
   return (
@@ -33,8 +33,8 @@ const ArrayDS = () => {
         <div className="p-12 pb-8 text-8xl" ref={HeadingRef}>
           Array
         </div>
-        <div className="pl-16 pr-28 pb-10" ref={containerRef}>
-          <p className="text-xl">Introduction</p>
+        <div className="md:pl-16 md:pr-28 md:pb-10 p-5 " ref={containerRef}>
+          <h1 className="text-3xl text-yellow-200 mb-5">Introduction</h1>
           <p>
             <span className="text-xl">A</span>n array is a collection of items
             stored at contiguous memory locations. The idea is to store multiple
@@ -59,7 +59,7 @@ const ArrayDS = () => {
             <br /> &emsp;&emsp;n (n-based indexing): The base index of an array
             can be freely chosen.
           </p>
-          <p className="text-xl mt-5">Array Representation</p>
+          <h1 className="text-3xl text-yellow-200 mb-5 mt-5">Array Representation</h1>
           <div className="relative h-60 w-full p-8">
             <img
               className="absolute top-4 bottom-0 object-cover h-full"
@@ -67,7 +67,7 @@ const ArrayDS = () => {
               alt="Array Representation"
             />
           </div>
-          <p className="text-xl mt-8">Basic Operations</p>
+          <p className="text-3xl text-yellow-200 mb-5 mt-8">Basic Operations</p>
           <p>
             Following are the basic operations supported by an array.
             <br /> &emsp;&emsp;<strong>Traverse</strong> − print all the array
@@ -91,7 +91,7 @@ const ArrayDS = () => {
             <br /> &emsp;&emsp; <strong>Update</strong> − Updates an element at
             the given index.
           </p>
-          <p className="text-xl mt-8">Advantages Of Array</p>
+          <h1 className="text-3xl text-yellow-200 mb-5 mt-8">Advantages Of Array</h1>
           <p>
             &emsp;1. Arrays represent multiple data items of the same type using
             a single name.
@@ -115,7 +115,7 @@ const ArrayDS = () => {
             <br />
             &emsp;6. Maintains multiple variable names using a single name.
           </p>
-          <p className="text-xl mt-8">Disadvantages Of Array</p>
+          <h1 className="text-3xl text-yellow-200 mb-5 mt-8">Disadvantages Of Array</h1>
           <p>
             &emsp;1. The number of elements to be stored in an array should be
             known in advance.
