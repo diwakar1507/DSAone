@@ -2,10 +2,10 @@ import React from "react";
 
 function ViewCard(props) {
   return (
-    <div className={`relative ${props.index % 2 ? 'bg-plain-white' : 'bg-primary-3'} flex flex-col rounded-lg ml-auto mr-auto h-64 w-64 shadow-lg `}>
+    <div className={`relative ${props.index % 2 ? 'bg-plain-white' : 'bg-primary-3'} flex flex-col rounded-lg ml-auto mr-auto h-64 w-64 shadow-lg transform transition duration-500 hover:scale-110 hover:shadow-xl`}>
       <div className="h-full ">
         <div className="relative h-full">
-          <img src={props.image} alt="To be Added" className="h-3/4 p-4 absolute top-16 transform transition duration-500 hover:scale-110 hover:shadow-xl"></img>
+          <img src={props.image} alt="To be Added" className="h-3/4 p-4 absolute top-16 "></img>
         </div>
       </div>
       <div className="z-20 absolute top-0 h-full w-full">
