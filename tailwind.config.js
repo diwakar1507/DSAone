@@ -36,7 +36,7 @@ module.exports = {
       'primary-3': '#FD7014',
       'gray82': '#D1D1D1',
       'plain-white':'#EEEEEE',
-      'horizon': '#637D97',
+      'horizon': '#888B90',
     },
   },
   plugins: [],
