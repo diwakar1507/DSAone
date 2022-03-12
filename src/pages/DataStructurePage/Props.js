@@ -29,7 +29,7 @@ let Props = [
   },
   {
     index: 8,
-    img: "-translate-y-16 translate-x-4"
+    img: " scale-75 -translate-y-10"
   }
 ];
 

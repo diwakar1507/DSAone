@@ -7,6 +7,7 @@ import queueCard from "../../img/DataStructure/Queue/QueueCard.svg"
 import treeCard from "../../img/DataStructure/Tree/TreeCard.svg"
 import BSTCard from "../../img/DataStructure/BST/BSTCard.svg"
 import HeapCard from "../../img/DataStructure/Heap/HeapCard.svg"
+import graphCard from '../../img/DataStructure/Graph/GraphCard.svg'
 import TreeDS from "./Courses/Tree";
 import StackDS from "./Courses/Stack";
 import QueueDS from "./Courses/Queue";
@@ -61,7 +62,7 @@ let Courses = [
       name: "Graph",
       index: 8,
       page: GraphDS,
-      img: BSTCard
+      img: graphCard
     },
   ];
   
