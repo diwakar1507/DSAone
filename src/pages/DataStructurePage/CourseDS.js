@@ -6,7 +6,11 @@ const CourseDS = () => {
   let params = useParams();
   const Course = getCourse(parseInt(params.courseID, 10));
 
-  return <Course />;
+  return(
+    <div className="bg-primary-1 pt-10">
+      <Course />
+    </div>
+  ) ;
 };
 
 export default CourseDS;

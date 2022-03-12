@@ -442,7 +442,7 @@ const LandingPage = () => {
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
         <div className="absolute h-1/3 w-3/12 left-56 top-36">
-          <div className="text-9xl z-50 mix-blend-screen" ref={dsaRef}>
+          <div className="text-plain-white text-9xl z-50 mix-blend-screen" ref={dsaRef}>
             DSA
           </div>
           <div className="z-50 mix-blend-screen" ref={lineRef}>
@@ -485,7 +485,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-dark-green h-screen w-screen relative" id="data">
+      <div className="bg-primary-1 h-screen w-screen relative" id="data">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative" ref={illustration1Ref}>
             <img
@@ -496,7 +496,7 @@ const LandingPage = () => {
           </div>
           <div className="basis-1/2 relative" ref={Container1Ref}>
             <div className="absolute w-full h-3/4 top-24 flex flex-col">
-              <div className="flex flex-col" ref={Heading1Ref}>
+              <div className="text-plain-white flex flex-col" ref={Heading1Ref}>
                 <div className="text-9xl pt-4 pl-24">DATA</div>
                 <div className="text-7xl self-end p-4 pr-24">STRUCTURE</div>
               </div>
@@ -510,7 +510,7 @@ const LandingPage = () => {
                 className="self-end mr-32 cursor-pointer"
                 to="/DataStructure">
                 <div
-                  className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl "
+                  className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl "
                   ref={Button1Ref}>
                   Learn More
                 </div>
@@ -519,11 +519,11 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-dark-green h-screen w-screen relative" id="algorithm">
+      <div className="bg-primary-1 h-screen w-screen relative" id="algorithm">
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative" ref={Container2Ref}>
             <div className="absolute w-full h-3/4 top-44 flex flex-col">
-              <div className="text-8xl pt-4 pl-24" ref={Heading2Ref}>
+              <div className="text-plain-white text-8xl pt-4 pl-24" ref={Heading2Ref}>
                 ALGORITHM
               </div>
               <div
@@ -535,7 +535,7 @@ const LandingPage = () => {
                 programming, Backtracking etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
                 ref={Button2Ref}>
                 Learn More
               </div>
@@ -550,7 +550,7 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-      <div className="bg-dark-green h-screen w-screen relative" id="about">
+      <div className="bg-primary-1 h-screen w-screen relative" id="about">
         <div className="flex h-3/4 w-full">
           <div className="basis-1/2 relative" ref={illustration3Ref}>
             <img
@@ -561,7 +561,7 @@ const LandingPage = () => {
           </div>
           <div className="basis-1/2 relative" ref={Container3Ref}>
             <div className="absolute w-full h-3/4 top-12 flex flex-col">
-              <div className="flex flex-col" ref={Heading3Ref}>
+              <div className="text-plain-white flex flex-col" ref={Heading3Ref}>
                 <div className="text-9xl pt-4 pl-24">ABOUT</div>
                 <div className="text-7xl self-end p-4 pr-24">PROJECT</div>
               </div>
@@ -572,7 +572,7 @@ const LandingPage = () => {
                 Linked List, Stack, Queue, Graph etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-golden-yellow text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-end mr-32 cursor-pointer"
                 onClick={() => {
                   window.location.href = "https://www.google.com/";
                 }}
@@ -582,7 +582,7 @@ const LandingPage = () => {
             </div>
           </div>
         </div>
-        <div className="bg-dark-green h-1/4 w-full pt-8">
+        <div className="bg-primary-1 h-1/4 w-full pt-8">
           <div className="marquee mt-10">
             <ul className="scroll-track scroll1 list-none h-full flex">
               <li>Array</li>

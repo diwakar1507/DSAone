@@ -78,12 +78,12 @@ i:nth-child(3n + 3) {
 
 .marquee::before{
   left: 0;
-  background: linear-gradient(to right, #041C32 0%, transparent 100%);
+  background: linear-gradient(to right, #222831 0%, transparent 100%);
 }
 
 .marquee::after{
   right: 0;
-  background: linear-gradient(to left, #041C32 0%, transparent 100%);
+  background: linear-gradient(to left, #222831 0%, transparent 100%);
 }
 
 .scroll1{

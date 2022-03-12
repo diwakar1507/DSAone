@@ -29,7 +29,7 @@ const ArrayDS = () => {
 
   return (
     <div className="text-l text-gray82 pb-28">
-      <div className="bg-dark-green w-full relative">
+      <div className="bg-primary-1 w-full relative">
         <div className="p-12 pb-8 text-8xl" ref={HeadingRef}>
           Array
         </div>

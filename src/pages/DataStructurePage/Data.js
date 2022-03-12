@@ -1,10 +1,16 @@
 import ArrayDS from "./Courses/Array";
+import LinkedList from "./Courses/LinkedList";
 
 let Courses = [
     {
       name: "Array",
       index: 1,
       page: ArrayDS
+    },
+    {
+      name: "Linked List",
+      index: 2,
+      page: LinkedList
     },
   ];
   

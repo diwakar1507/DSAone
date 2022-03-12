@@ -5,7 +5,7 @@ import { getCourses } from "./Data";
 const MainDS = () => {
   const Courses = getCourses();
   return (
-    <div className="bg-dark-green text-l text-gray82 w-full h-screen overflow-hidden">
+    <div className="bg-primary-1 text-l text-gray82 w-full h-screen overflow-hidden">
       <div className="pl-10 border-b-2 border-stone-700 p-5 text-4xl cursor-pointer text-white">
         <Link to={`/`}>DSA one</Link>
       </div>
