@@ -1,17 +1,20 @@
 import ArrayDS from "./Courses/Array";
 import LinkedList from "./Courses/LinkedList";
-
+import arrayCard from "../../img/DataStructure/Array/ArrayCard.svg";
+import linkedListCard from "../../img/DataStructure/Linked List/LinkedListCard.svg";
 let Courses = [
     {
       name: "Array",
       index: 1,
-      page: ArrayDS
+      page: ArrayDS,
+      img: arrayCard
     },
     {
       name: "Linked List",
       index: 2,
-      page: LinkedList
-    },
+      page: LinkedList,
+      img: linkedListCard
+    }
   ];
   
   export function getCourses() {
