@@ -1,30 +1,21 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import { getCourses } from "./Data";
 
 const MainDS = () => {
-  const Courses = getCourses();
   return (
-    <div className="bg-primary-1 text-l text-gray82 w-full h-screen overflow-hidden">
-      <div className="pl-10 border-b-2 border-stone-700 p-5 text-4xl cursor-pointer text-white">
-        <Link to={`/`}>DSA one</Link>
-      </div>
-      <div className="flex h-full">
-        <div className="border-r-2 border-stone-700 w-1/6 h-full p-4 overflow-x-auto shrink-0">
-          <div className="text-xl pb-4">Data Structures</div>
-          {Courses.map((course) => (
-            <Link
-              className="ml-6"
-              to={`/DataStructure/${course.index}`}
-              key={course.index}>
-              {course.index}. {course.name}
+    <div className="bg-primary-1 w-screen relative">
+      <div className="fixed top-0 w-screen z-30">
+        <div className="backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
+          <div className="flex p-8 text-plain-white">
+            <Link to={`/`} className="flex-1 text-3xl">
+              DSAone
             </Link>
-          ))}
-        </div>
-        <div className="overflow-x-auto">
-          <Outlet />
+            <div className="text-5xl">Data Structures</div>
+            <div className="flex-1"></div>
+          </div>
         </div>
       </div>
+      <Outlet />
     </div>
   );
 };

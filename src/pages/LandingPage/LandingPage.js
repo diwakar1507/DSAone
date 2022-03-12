@@ -510,7 +510,7 @@ const LandingPage = () => {
                 className="self-end mr-32 cursor-pointer"
                 to="/DataStructure">
                 <div
-                  className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl "
+                  className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl "
                   ref={Button1Ref}>
                   Learn More
                 </div>
@@ -535,7 +535,7 @@ const LandingPage = () => {
                 programming, Backtracking etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-start ml-28 mt-8 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-start ml-28 mt-8 cursor-pointer"
                 ref={Button2Ref}>
                 Learn More
               </div>
@@ -572,7 +572,7 @@ const LandingPage = () => {
                 Linked List, Stack, Queue, Graph etc.
               </div>
               <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-gray-900 text-2xl self-end mr-32 cursor-pointer"
+                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-end mr-32 cursor-pointer"
                 onClick={() => {
                   window.location.href = "https://www.google.com/";
                 }}
