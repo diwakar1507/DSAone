@@ -8,6 +8,8 @@ import illustration1 from "../../img/Landing Page/Section 2/Illustration.svg";
 import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import BackToTop from "../../img/Landing Page/BackToTop.svg";
+
 import { gsap } from "gsap";
 import { Link as SLink } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -372,7 +374,7 @@ const LandingPage = () => {
     <div className="text-l relative z-20 overflow-hidden text-gray82" id="top">
 
       <SLink to="top" smooth={true} duration={700}>
-        {visible&&<span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5" ref={image}>
+        {visible&&<span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5">
           <img src={BackToTop} />
         </span>}
       </SLink>
