@@ -7,10 +7,10 @@ import { HeapSort } from "../SortFunctions/HeapSort";
 import { MergeSort } from "../SortFunctions/MergeSort";
 
 // colors setting
-export const comparisionColor = "pink";
-export const swapColor = "yellow";
-export const sortedColor = "springgreen";
-export const pivotColor = "sandybrown";
+export const comparisionColor = "#700B97";
+export const swapColor = "#FF8BA0";
+export const sortedColor = "#00ADB5";
+export const pivotColor = "#FF0000";
 
 // time setting
 export let swapTime = 1000;
