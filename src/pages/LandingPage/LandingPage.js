@@ -7,7 +7,6 @@ import Moon from "../../img/Landing Page/Section 1/Moon.svg";
 import illustration1 from "../../img/Landing Page/Section 2/Illustration.svg";
 import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
-import BackToTop from "../../img/Landing Page/BackToTop.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { gsap } from "gsap";
 import { Link as SLink } from "react-scroll";
@@ -27,7 +26,7 @@ const LandingPage = () => {
   const moonRef = useRef(null);
   const middleRef = useRef(null);
   const frontRef = useRef(null);
-  const image = useRef(null);
+
   // Section2 Refs
   const illustration1Ref = useRef(null);
   const Container1Ref = useRef(null);
@@ -316,7 +315,6 @@ const LandingPage = () => {
       scrollTrigger: {
         trigger: Data3Ref.current,
         start: "top 75%",
-
       },
       opacity: 0,
       delay: 0.8,
@@ -344,14 +342,13 @@ const LandingPage = () => {
   }, []);
 
   useEffect(() => {
-
     scrollAnimations();
-    return () => { };
+    return () => {};
   }, [scrollAnimations]);
 
   useEffect(() => {
     meteors();
-    return () => { };
+    return () => {};
   }, []);
 
   const meteors = () => {
