@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback,useState } from "react";
 import "./Styles.css";
 import hillBack from "../../img/Landing Page/Section 1/Hills/Hill Back.svg";
 import hillMiddle from "../../img/Landing Page/Section 1/Hills/Hill Middle.svg";
@@ -309,10 +309,10 @@ const LandingPage = () => {
       duration: 0.6,
       ease: "Power2.out",
     });
-    
-  
 
-    gsap.to(Data3Ref.current, {
+
+
+    gsap.from(Data3Ref.current, {
       scrollTrigger: {
         trigger: Data3Ref.current,
         start: "top 75%",
@@ -324,9 +324,27 @@ const LandingPage = () => {
       ease: "Power2.out",
     });
   }, []);
+  
+  const [visible, setVisible] = useState(false);
+
+  const listenToScroll = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 300){
+      setVisible(true)
+    } 
+    else if (scrolled <= 300){
+      setVisible(false)
+    }
+  };
+
+  useEffect(() => {   
+    window.addEventListener("scroll", listenToScroll);
+    return () => 
+       window.removeEventListener("scroll", listenToScroll); 
+  }, []);
 
   useEffect(() => {
-    
+
     scrollAnimations();
     return () => { };
   }, [scrollAnimations]);
@@ -354,12 +372,12 @@ const LandingPage = () => {
   };
 
   return (
-    <div className="text-l relative z-20 text-gray82" id="top">
+    <div className="text-l relative z-20 overflow-hidden text-gray82" id="top">
 
       <SLink to="top" smooth={true} duration={700}>
-        <span className="text-xl bottom-8 fixed z-10 text-center opacity-0  left-0 bg-grey-900 cursor-pointer w-24 ml-5" ref={image}>
-          <img  src={BackToTop} />
-        </span>
+        {visible&&<span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5" ref={image}>
+          <img src={BackToTop} />
+        </span>}
       </SLink>
 
       <div
@@ -546,11 +564,17 @@ const LandingPage = () => {
                 design techniques such as Greedy, Divide & Conquer, Dynamic
                 programming, Backtracking etc.
               </div>
-              <div
+              <Link
+                className="self-end mr-32 cursor-pointer"
+                to="/Algorithm">
+                 <div
                 className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-start ml-28 mt-8 cursor-pointer"
                 ref={Button2Ref}>
                 Learn More
               </div>
+              </Link>
+
+             
             </div>
           </div>
           <div className="basis-1/2 relative" ref={illustration2Ref}>
