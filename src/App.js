@@ -4,8 +4,11 @@ import LandingPage from "./pages/LandingPage/LandingPage";
 import { Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import MainDS from "./pages/DataStructurePage/MainDS";
+import MainAlgo from "./pages/AlgorithmPage/MainAlgo";
 import CourseDS from "./pages/DataStructurePage/CourseDS";
+import CourseAlgo from "./pages/AlgorithmPage/CourseAlgo";
 import Content from "./pages/DataStructurePage/Content";
+import AContent from "./pages/AlgorithmPage/AContent";
 
 function App() {
   return (
@@ -16,6 +19,10 @@ function App() {
         <Route path="DataStructure" element={<MainDS />}>
           <Route index="true" element={<Content />}/>
           <Route path=":courseID" element={<CourseDS />} />
+        </Route>
+        <Route path="Algorithm" element={<MainAlgo />}>
+        <Route index="true" element={<AContent />}/>
+          <Route path=":courseID" element={<CourseAlgo />} />
         </Route>
       </Routes>
     </BrowserRouter>
