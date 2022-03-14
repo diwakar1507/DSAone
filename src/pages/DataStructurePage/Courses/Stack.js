@@ -167,7 +167,7 @@ const StackDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="text-9xl text-yellow-200 py-9 font-display" ref={headingRef}> STACK </div>
                 <div className="flex">
                     <div className="px-10 py-10 w-1/2 h-1/2" ref={StackRef}>

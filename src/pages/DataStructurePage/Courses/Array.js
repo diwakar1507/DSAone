@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useCallback } from "react";
 import representation from "../../../img/DataStructure/Array/Array.svg";
+import back from "../../../img/DataStructure/back.svg";
 import { gsap } from "gsap";
 
 const ArrayDS = () => {
@@ -28,7 +29,10 @@ const ArrayDS = () => {
   }, []);
 
   return (
+    <div className= "relative z-20">
+      
     <div className="text-l text-gray82 pb-28">
+      
       <div className="bg-primary-1 w-full relative">
         <div className="p-12 pb-8 text-8xl" ref={HeadingRef}>
           Array
@@ -131,6 +135,7 @@ const ArrayDS = () => {
           </p>
         </div>
       </div>
+    </div>
     </div>
   );
 };

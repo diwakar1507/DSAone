@@ -166,7 +166,7 @@ const QueueDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="text-9xl text-yellow-200 py-9 font-display " ref={headingRef}> QUEUE </div>
                 <div className="flex">
                     <div className="px-10 py-10 w-1/2 h-1/2" ref={StackRef}>
@@ -189,7 +189,7 @@ const QueueDs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="bg-slate-800 pb-24" ref={intro}>
+                <div className="bg-primary-1 pb-24" ref={intro}>
                     <div className="text-5xl font-serif text-center py-16 text-yellow-200" ><h1>Introduction To Queue</h1></div>
                     <div className="text-2xl px-28 text-slate-300">A queue is a data structure used for storing data (similar to Linked Lists and Stacks). In queue, the
                         order in which data arrives is important. In general, a queue is a line of people or things waiting

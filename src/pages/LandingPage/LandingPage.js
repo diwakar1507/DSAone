@@ -370,7 +370,7 @@ const LandingPage = () => {
     <div className="text-l relative z-20 overflow-hidden text-gray82" id="top">
       <SLink to="top" smooth={true} duration={700}>
         {visible && (
-          <span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5">
+          <span className="text-xl bottom-5 fixed z-10 animate-bounce text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-2">
             <img src={BackToTop} />
           </span>
         )}

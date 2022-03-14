@@ -66,7 +66,7 @@ const BSTDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="flex">
                     <div className="block">
                         <div className="text-9xl text-yellow-200 py-9 font-display " ref={headingRef}> BST </div>
@@ -81,7 +81,7 @@ const BSTDs = () => {
                         ref={image}
                     />
                 </div>
-                <div className="bg-slate-800 text text-2xl text-left text-slate-300 pb-24 pt-10 px-28 " ref={intro}>
+                <div className="bg-primary-1 text text-2xl text-left text-slate-300 pb-24 pt-10 px-28 " ref={intro}>
                     <h1 className="text-5xl font-serif text-center py-10 text-yellow-200">Introduction To BST</h1>
                     In previous sections we have discussed different tree representations and in all of them we did
                     not impose any restriction on the nodes data. As a result, to search for an element we need to
