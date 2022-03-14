@@ -3,7 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 
 const MainDS = () => {
   return (
-    <div className="bg-primary-1 w-screen relative">
+    <div className="bg-primary-1 w-screen relative overflow-hidden">
       <div className="fixed top-0 w-screen z-30">
         <div className="backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
           <div className="flex p-8 text-plain-white">

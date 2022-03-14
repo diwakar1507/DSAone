@@ -1,5 +1,5 @@
 import React from "react";
-import { getStyle } from "../pages/DataStructurePage/Props";
+import { getStyle } from "../pages/AlgorithmPage/Props";
 
 function ViewCard(props) {
   const styles = getStyle(props.index);

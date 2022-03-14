@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 
-const MainDS = () => {
+const MainAlgo = () => {
   return (
     <div className="bg-primary-1 w-screen relative">
       <div className="fixed top-0 w-screen z-30">
@@ -20,4 +20,4 @@ const MainDS = () => {
   );
 };
 
-export default MainDS;
+export default MainAlgo;
