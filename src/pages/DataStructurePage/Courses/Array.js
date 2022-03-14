@@ -63,6 +63,7 @@ const ArrayDS = () => {
             <br /> &emsp;&emsp;n (n-based indexing): The base index of an array
             can be freely chosen.
           </p>
+          
           <h1 className="text-3xl text-yellow-200 mb-5 mt-5">Array Representation</h1>
           <div className="relative h-60 w-full p-8">
             <img
