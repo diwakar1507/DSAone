@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import AlgoVisualize from "./Components/AlgoVisualize";
+import ControllBar from "./Components/ControllBar";
+import NavBar from "./Components/NavBar";
 
 const SortPlayground = () => {
   return (
-    <div>Hi</div>
-  )
-}
+    <div className="bg-primary-1 min-h-screen max-h-full w-full relative">
+      <NavBar />
+      <ControllBar/>
+      <AlgoVisualize/>
+    </div>
+  );
+};
 
-export default SortPlayground
+export default SortPlayground;

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback,useState } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 import "./Styles.css";
 import hillBack from "../../img/Landing Page/Section 1/Hills/Hill Back.svg";
 import hillMiddle from "../../img/Landing Page/Section 1/Hills/Hill Middle.svg";
@@ -311,8 +311,6 @@ const LandingPage = () => {
       ease: "Power2.out",
     });
 
-
-
     gsap.from(Data3Ref.current, {
       scrollTrigger: {
         trigger: Data3Ref.current,
@@ -324,23 +322,21 @@ const LandingPage = () => {
       ease: "Power2.out",
     });
   }, []);
-  
+
   const [visible, setVisible] = useState(false);
 
   const listenToScroll = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 300){
-      setVisible(true)
-    } 
-    else if (scrolled <= 300){
-      setVisible(false)
+    if (scrolled > 300) {
+      setVisible(true);
+    } else if (scrolled <= 300) {
+      setVisible(false);
     }
   };
 
-  useEffect(() => {   
+  useEffect(() => {
     window.addEventListener("scroll", listenToScroll);
-    return () => 
-       window.removeEventListener("scroll", listenToScroll); 
+    return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
   useEffect(() => {
@@ -372,11 +368,12 @@ const LandingPage = () => {
 
   return (
     <div className="text-l relative z-20 overflow-hidden text-gray82" id="top">
-
       <SLink to="top" smooth={true} duration={700}>
-        {visible&&<span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5">
-          <img src={BackToTop} />
-        </span>}
+        {visible && (
+          <span className="text-xl bottom-8 fixed z-10 text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-5">
+            <img src={BackToTop} />
+          </span>
+        )}
       </SLink>
 
       <div
@@ -471,7 +468,9 @@ const LandingPage = () => {
           className="absolute w-full h-full z-0 skew-x-12"
           ref={meteoRef}></div>
         <div className="absolute h-1/3 w-3/12 left-56 top-36">
-          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-700 to-orange-400 text-9xl z-50 mix-blend-screen" ref={dsaRef}>
+          <div
+            className="bg-clip-text text-transparent bg-gradient-to-b from-orange-700 to-orange-400 text-9xl z-50 mix-blend-screen"
+            ref={dsaRef}>
             DSA
           </div>
           <div className="z-50 mix-blend-screen" ref={lineRef}>
@@ -479,10 +478,14 @@ const LandingPage = () => {
               <line x1="25" x2="300" stroke="#b6b6b6" strokeWidth="4" />
             </svg>
           </div>
-          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-7xl ml-28 z-20 mix-blend-screen" ref={oneRef}>
+          <div
+            className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-7xl ml-28 z-20 mix-blend-screen"
+            ref={oneRef}>
             one
           </div>
-          <div className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-3xl ml-11 mt-5 mix-blend-screen" ref={learnRef}>
+          <div
+            className="bg-clip-text text-transparent bg-gradient-to-b from-orange-400 to-orange-200 text-3xl ml-11 mt-5 mix-blend-screen"
+            ref={learnRef}>
             Learn By Fun...
           </div>
         </div>
@@ -552,7 +555,9 @@ const LandingPage = () => {
         <div className="flex h-full w-full">
           <div className="basis-1/2 relative" ref={Container2Ref}>
             <div className="absolute w-full h-3/4 top-44 flex flex-col">
-              <div className="text-plain-white text-8xl pt-4 pl-24" ref={Heading2Ref}>
+              <div
+                className="text-plain-white text-8xl pt-4 pl-24"
+                ref={Heading2Ref}>
                 ALGORITHM
               </div>
               <div
@@ -563,17 +568,13 @@ const LandingPage = () => {
                 design techniques such as Greedy, Divide & Conquer, Dynamic
                 programming, Backtracking etc.
               </div>
-              <Link
-                className="self-end mr-32 cursor-pointer"
-                to="/Algorithm">
-                 <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-start ml-28 mt-8 cursor-pointer"
-                ref={Button2Ref}>
-                Learn More
-              </div>
+              <Link className="self-end mr-32 cursor-pointer" to="/Algorithm">
+                <div
+                  className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-start ml-28 mt-8 cursor-pointer"
+                  ref={Button2Ref}>
+                  Learn More
+                </div>
               </Link>
-
-             
             </div>
           </div>
           <div className="basis-1/2 relative" ref={illustration2Ref}>
@@ -606,14 +607,13 @@ const LandingPage = () => {
                 all important topics of Data Structure such as Array, Trees,
                 Linked List, Stack, Queue, Graph etc.
               </div>
-              <div
-                className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl self-end mr-32 cursor-pointer"
-                onClick={() => {
-                  window.location.href = "https://www.google.com/";
-                }}
-                ref={Button3Ref}>
-                Visit Github
-              </div>
+              <Link className="self-end mr-32 cursor-pointer" to={"/PlayGround"}>
+                <div
+                  className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl"
+                  ref={Button3Ref}>
+                  Visit Github
+                </div>
+              </Link>
             </div>
           </div>
         </div>
