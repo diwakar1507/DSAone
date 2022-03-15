@@ -5,7 +5,7 @@ import { Tab } from "@mui/material";
 import { sortingAlgorithms } from "../Common/config";
 import { useData } from "../Common/store";
 import shallow from "zustand/shallow";
-import { theme } from "../../common/MUI_Theme";
+import { theme } from "../../Common/MUI_Theme";
 
 const NavBar = () => {
   const [algorithm, setAlgorithm] = useData(

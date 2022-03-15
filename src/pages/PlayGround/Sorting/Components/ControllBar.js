@@ -10,15 +10,15 @@ import {
   ThemeProvider,
   styled,
 } from "@mui/material";
-import { delay } from "../Common/helper";
-import { theme } from "../../common/MUI_Theme";
+import { delay } from "../../Common/helper";
+import { theme } from "../../Common/MUI_Theme";
 import shallow from "zustand/shallow";
 import { useData, useControls } from "../Common/store";
 import {
   convertInputToArrayString,
   convertArrayStringToArray,
   getRandomArray,
-} from "../Common/helper";
+} from "../../Common/helper";
 
 const ArrayTextField = styled(TextField)({
   "& input:valid + fieldset": {

@@ -1,4 +1,4 @@
-import { getScreenWidth } from "./helper.js";
+import { getScreenWidth } from "../../Common/helper.js";
 import { BubbleSort } from "../SortFunctions/BubbleSort";
 import { SelectionSort } from "../SortFunctions/SelectionSort";
 import { InsertionSort } from "../SortFunctions/InsertionSort";

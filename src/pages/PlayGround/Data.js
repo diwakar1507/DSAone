@@ -1,4 +1,5 @@
 import Sorting from "./Sorting/SortPlayground";
+import Searching from "./Searching/SearchPlayground";
 
 let Visualizations = [
   {
@@ -6,6 +7,11 @@ let Visualizations = [
     name: "Sorting",
     page: Sorting,
   },
+  {
+    index : 2,
+    name: "Searching",
+    page: Searching,
+  }
 ];
 
 export function getVisualizations() {

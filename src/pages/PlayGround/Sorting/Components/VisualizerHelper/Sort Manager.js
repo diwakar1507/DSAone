@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
+import { useControls, useData } from "../../Common/store";
 import { ArrayContainer } from "./ArrayContainer";
 import { MergeContainer } from "./MergeContainer";
-import { Info } from "./Info";
-import { Timer } from "./Timer";
-import { delay } from "../../Common/helper";
+import { delay } from "../../../Common/helper";
 import shallow from "zustand/shallow";
-import { useControls, useData } from "../../Common/store";
+import { Timer } from "./Timer";
+import { Info } from "./Info";
 
 let compareTime = useControls.getState().compareTime;
 let swapTime = useControls.getState().swapTime;
