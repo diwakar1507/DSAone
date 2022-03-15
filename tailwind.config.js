@@ -37,6 +37,7 @@ module.exports = {
       'gray82': '#D1D1D1',
       'plain-white':'#EEEEEE',
       'horizon': '#888B90',
+
     },
   },
   plugins: [],

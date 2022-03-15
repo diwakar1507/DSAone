@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-
 const MainAlgo = () => {
   return (
     <div className="bg-primary-1 w-screen relative">
@@ -11,6 +10,7 @@ const MainAlgo = () => {
               DSAone
             </Link>
             <div className="text-5xl">Algorithms</div>
+            
             <div className="flex-1"></div>
           </div>
         </div>

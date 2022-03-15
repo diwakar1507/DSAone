@@ -11,7 +11,7 @@ const GraphDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="text-8xl px-16  text-yellow-200 py-9 font-display ml-10 mt-10 " > Graph </div>
 
                 <div className="bg-slate-800 pb-24 px-28" >

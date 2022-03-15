@@ -66,7 +66,7 @@ const TreeDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="flex">
                     <div className="block">
                         <div className="text-8xl text-yellow-200 py-9 font-display " ref={headingRef}> TREE </div>
@@ -81,7 +81,7 @@ const TreeDs = () => {
                         ref={image}
                     />
                 </div>
-                <div className="bg-slate-800 pb-24" ref={intro}>
+                <div className="bg-primary-1 pb-24" ref={intro}>
                     <div className="text-5xl font-serif text-center py-16 text-yellow-200" ><h1>Introduction To Tree</h1></div>
                     <div className="text-2xl px-28 text-slate-300">A tree is a data structure similar to a linked list but instead of each node pointing simply to the
                         next node in a linear fashion, each node points to a number of nodes. Tree is an example of a nonlinear

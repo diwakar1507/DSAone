@@ -11,10 +11,10 @@ const LinkedListDs = () => {
 
   return (
     <>
-      <div className="bg-slate-800 overflow-hidden pb-24">
+      <div className="bg-primary-1 overflow-hidden pb-24">
         <div className="text-8xl px-16  text-yellow-200 py-9 font-display ml-10 mt-10 " > Linked List </div>
 
-        <div className="bg-slate-800 pb-24 px-28" >
+        <div className="bg-primary-1 pb-24 px-28" >
           <div className="text-5xl py-16 font-serif text-yellow-200" ><h1>Introduction To Linked List</h1></div>
           <div className="text-2xl text-slate-300">
             A linked list is a data structure used for storing collections of data. A linked list has the following

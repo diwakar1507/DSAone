@@ -78,7 +78,7 @@ const HeapDs = () => {
 
     return (
         <>
-            <div className="bg-slate-800 overflow-hidden pb-24">
+            <div className="bg-primary-1 overflow-hidden pb-24">
                 <div className="flex">
                     <div className="block">
                         <div className="text-9xl text-yellow-200 py-9 font-display " ref={headingRef}> HEAP </div>
@@ -93,7 +93,7 @@ const HeapDs = () => {
                         ref={image}
                     />
                 </div>
-                <div className="bg-slate-800 text-2xl text-left text-slate-300 pb-24 pt-10 px-28 " ref={intro}>
+                <div className="bg-primary-1 text-2xl text-left text-slate-300 pb-24 pt-10 px-28 " ref={intro}>
                     <h1 className="text-5xl font-serif text-center py-10 text-yellow-200">Introduction To Heap</h1>
                      A heap is a tree with some special properties. The basic requirement of a heap is that the value of
                         a node must be ≥ (or ≤) than the values of its children. This is called heap property. A heap also

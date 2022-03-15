@@ -34,7 +34,7 @@ const SelectPlay = () => {
         </div>
       </div>
     </div>
-    </div>
+  </div>
   );
 };
 
