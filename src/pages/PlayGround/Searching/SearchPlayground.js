@@ -3,12 +3,14 @@ import AlgoVisualize from "./Components/AlgoVisualize";
 import ControllBar from "./Components/ControllBar";
 import NavBar from "./Components/NavBar";
 
-const SortPlayground = () => {
+const SearchPlayground = () => {
   return (
     <div className="bg-primary-1 min-h-screen max-h-full w-full relative">
-      This is where Search is going to be.
+      <NavBar />
+      <ControllBar />
+      <AlgoVisualize />
     </div>
   );
 };
 
-export default SortPlayground;
+export default SearchPlayground;

@@ -10,14 +10,14 @@ import { Info } from "./Info";
 let compareTime = useControls.getState().compareTime;
 let swapTime = useControls.getState().swapTime;
 
-useControls.subscribe(
-  ([cTime, sTime]) => {
-    compareTime = cTime;
-    swapTime = sTime;
-  },
-  (state) => [state.compareTime, state.swapTime],
-  shallow
-);
+// useControls.subscribe(
+//   ([cTime, sTime]) => {
+//     compareTime = cTime;
+//     swapTime = sTime;
+//   },
+//   (state) => [state.compareTime, state.swapTime],
+//   shallow
+// );
 
 export const SortManager = React.memo(function ({
   array,
