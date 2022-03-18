@@ -12,7 +12,7 @@ import PlayGround from "./pages/PlayGround/PlayGround";
 import SelectPlay from "./pages/PlayGround/SelectPlay";
 import GoPlay from "./pages/PlayGround/GoPlay";
 import AContent from "./pages/AlgorithmPage/AContent";
-
+import PathfindingVisualizer from "./pages/PathfindingVisualizer/PathfindingVisualizer";
 function App() {
   return (
     // <SmoothScroll>
@@ -31,7 +31,7 @@ function App() {
           <Route index="true" element={<SelectPlay />} />
           <Route path=":VID" element={<GoPlay />} />
         </Route>
-
+        <Route path="Graph" element={<PathfindingVisualizer />} />
       </Routes>
     </BrowserRouter>
     // </SmoothScroll>

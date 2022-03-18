@@ -1,0 +1,13 @@
+
+
+/* Grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: 100vw;
+  padding-bottom: 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
