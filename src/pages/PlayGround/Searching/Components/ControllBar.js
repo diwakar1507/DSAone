@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { VscDebugStart } from "react-icons/vsc";
 import { VscDebugRestart } from "react-icons/vsc";
 import { ImPause } from "react-icons/im";
@@ -46,44 +46,56 @@ const Generate = styled(Button)(({ theme }) => ({
     backgroundColor: "#C95408",
   },
 }));
-
 const ControllBar = () => {
   const [isPausing, setIsPausing] = useState(false);
   const [progress, speed] = useControls(
     (state) => [state.progress, state.speed],
     shallow
   );
-  const [sortingArray, setSortingArray] = useData(
-    (state) => [state.sortingArray, state.setSortingArray],
-    shallow
-  );
-  const [startSorting, pauseSorting, resetSorting, setSpeed] = useControls(
-    (state) => [
-      state.startSorting,
-      state.pauseSorting,
-      state.resetSorting,
-      state.setSpeed,
-    ],
+  const [searchingArray, setSearchingArray] = useData(
+    (state) => [state.searchingArray, state.setSearchingArray],
     shallow
   );
 
-  const [arrayInput, setArrayInput] = useState(sortingArray);
+  const [searchElement, setSearchingElement] = useData(
+    (state) => [state.searchElement, state.setSearchingElement],
+    shallow
+  );
+  const [startSearching, pauseSearching, resetSearching, setSpeed] =
+    useControls(
+      (state) => [
+        state.startSearching,
+        state.pauseSearching,
+        state.resetSearching,
+        state.setSpeed,
+      ],
+      shallow
+    );
+  const [arrayInput, setArrayInput] = useState(searchingArray);
+  const [searchInput, setSearchInput] = useState(searchElement);
 
   const startElement = (
-    <VscDebugStart onClick={startSorting} color={"#FD7014"} size={"30px"} />
+    <VscDebugStart
+      onClick={() => {
+        if (searchInput !== null && arrayInput.length !== 0) startSearching();
+      }}
+      color={"#FD7014"}
+      size={"30px"}
+    />
   );
   const pauseElement = (
-    <ImPause onClick={pauseAndDelaySorting} color={"#FD7014"} size={"30px"} />
+    <ImPause onClick={pauseAndDelaySearching} color={"#FD7014"} size={"30px"} />
   );
   const resetElement = (
-    <VscDebugRestart onClick={resetSorting} color={"#FD7014"} size={"30px"} />
+    <VscDebugRestart onClick={resetSearching} color={"#FD7014"} size={"30px"} />
   );
-  const disabledPauseElement = <ImPause style={{ color: "#d1d1d1" }} size={"30px"}/>;
-
-  async function pauseAndDelaySorting() {
-    pauseSorting();
+  const disabledPauseElement = (
+    <ImPause style={{ color: "#d1d1d1" }} size={"30px"} />
+  );
+  async function pauseAndDelaySearching() {
+    pauseSearching();
     setIsPausing(true);
-    await delay(useControls.getState().swapTime);
+    await delay(useControls.getState().compareTime);
     setIsPausing(false);
   }
   function arrayDataChangeHandler(value) {
@@ -91,17 +103,29 @@ const ControllBar = () => {
     setArrayInput(arrayString);
 
     const array = convertArrayStringToArray(arrayString);
-    setSortingArray(array);
-    resetSorting();
+    setSearchingArray(array);
+    resetSearching();
   }
+  function searchDataChangeHandler(value) {
+    const re = /^[0-9\b]+$/;
+    if (value === "") {
+      setSearchInput(null);
+      setSearchingElement(null);
+      resetSearching();
+    } else if (re.test(value)) {
+      setSearchInput(value);
 
+      const element = parseInt(value, 10);
+      setSearchingElement(element);
+      resetSearching();
+    }
+  }
   function generate() {
     const randomArray = getRandomArray();
     setArrayInput(randomArray);
-    setSortingArray(randomArray);
-    resetSorting();
+    setSearchingArray(randomArray);
+    resetSearching();
   }
-
   function getProgressButton() {
     if (isPausing) return disabledPauseElement;
 
@@ -138,6 +162,17 @@ const ControllBar = () => {
             color="secondary"
             className="flex-1"
           />
+          <div className="pl-4 w-40">
+            <ArrayTextField
+              id="outlined-basic"
+              label="Search"
+              variant="outlined"
+              onChange={(event) => searchDataChangeHandler(event.target.value)}
+              value={searchInput}
+              size="small"
+              color="secondary"
+            />
+          </div>
         </div>
         <div className="flex flex-1 items-center pr-10">
           <div className="flex-none text-xl text-plain-white mr-10">Speed</div>

@@ -2,7 +2,7 @@ import React from "react";
 import { AppBar, ThemeProvider } from "@mui/material";
 import { Tabs } from "@mui/material";
 import { Tab } from "@mui/material";
-import { sortingAlgorithms } from "../Common/config";
+import { searchingAlgorithms } from "../Common/config";
 import { useData } from "../Common/store";
 import shallow from "zustand/shallow";
 import { theme } from "../../Common/MUI_Theme";
@@ -12,12 +12,11 @@ const NavBar = () => {
     (state) => [state.algorithm, state.setAlgorithm],
     shallow
   );
-
   return (
     <div className="w-full">
       <div className="flex items-center justify-center backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
         <div className="text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
-          Sorting Algos
+          Searching Algos
         </div>
       </div>
       <ThemeProvider theme={theme}>
@@ -32,10 +31,10 @@ const NavBar = () => {
             textColor="secondary"
             variant="scrollable"
             scrollButtons="auto">
-            {sortingAlgorithms.map((algorithm) => (
+            {searchingAlgorithms.map((algorithm) => (
               <Tab label={algorithm.title} key={algorithm.title} />
             ))}
-            <Tab label="All" />
+            <Tab label="All"/>
           </Tabs>
         </AppBar>
       </ThemeProvider>
