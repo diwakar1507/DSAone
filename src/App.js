@@ -31,6 +31,7 @@ function App() {
           <Route index="true" element={<SelectPlay />} />
           <Route path=":VID" element={<GoPlay />} />
         </Route>
+
       </Routes>
     </BrowserRouter>
     // </SmoothScroll>
