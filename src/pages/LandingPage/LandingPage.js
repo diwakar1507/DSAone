@@ -448,17 +448,8 @@ const LandingPage = () => {
               </SLink>
 
             </div>
-
           </div>
-          <Link
-            className="self-end mr-32 cursor-pointer"
-            to="/Graph">
-            <div
-              className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white ml-32 text-2xl "
-              ref={Button1Ref}>
-              PlayGround
-            </div>
-          </Link>
+
         </div>
       </div>
       <div className="bg-horizon h-screen w-screen relative" id="main">
