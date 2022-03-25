@@ -8,11 +8,11 @@ import MainAlgo from "./pages/AlgorithmPage/MainAlgo";
 import CourseDS from "./pages/DataStructurePage/CourseDS";
 import CourseAlgo from "./pages/AlgorithmPage/CourseAlgo";
 import Content from "./pages/DataStructurePage/Content";
-import PlayGround from "./pages/PlayGround/PlayGround";
-import SelectPlay from "./pages/PlayGround/SelectPlay";
-import GoPlay from "./pages/PlayGround/GoPlay";
+// import PlayGround from "./pages/PlayGround/PlayGround";
+// import SelectPlay from "./pages/PlayGround/SelectPlay";
+// import GoPlay from "./pages/PlayGround/GoPlay";
 import AContent from "./pages/AlgorithmPage/AContent";
-import PathfindingVisualizer from "./pages/PathfindingVisualizer/PathfindingVisualizer";
+
 function App() {
   return (
     // <SmoothScroll>
@@ -27,11 +27,11 @@ function App() {
           <Route index="true" element={<AContent />} />
           <Route path=":courseID" element={<CourseAlgo />} />
         </Route>
-        <Route path="PlayGround" element={<PlayGround />}>
+        {/* <Route path="PlayGround" element={<PlayGround />}>
           <Route index="true" element={<SelectPlay />} />
           <Route path=":VID" element={<GoPlay />} />
-        </Route>
-        <Route path="Graph" element={<PathfindingVisualizer />} />
+        </Route> */}
+
       </Routes>
     </BrowserRouter>
     // </SmoothScroll>

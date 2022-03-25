@@ -15,7 +15,7 @@ const Content = () => {
                   className="ml-6"
                   to={`/DataStructure/${course.index}`}
                   key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img}/>
+                  <ViewCard name={course.name} index={course.index} image={course.img} />
                 </Link>
               </div>
             ))}
