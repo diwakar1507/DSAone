@@ -448,7 +448,6 @@ const LandingPage = () => {
               </SLink>
 
             </div>
-
           </div>
 
         </div>
@@ -597,13 +596,13 @@ const LandingPage = () => {
                 all important topics of Data Structure such as Array, Trees,
                 Linked List, Stack, Queue, Graph etc.
               </div>
-              {/* <Link className="self-end mr-32 cursor-pointer" to={"/PlayGround"}>
+              <Link className="self-end mr-32 cursor-pointer" to={"/PlayGround"}>
                 <div
                   className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl"
                   ref={Button3Ref}>
                   Visit Github
                 </div>
-              </Link> */}
+              </Link>
             </div>
           </div>
         </div>
