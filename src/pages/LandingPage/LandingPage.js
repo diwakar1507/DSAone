@@ -9,7 +9,7 @@ import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BackToTop from "../../img/Landing Page/BackToTop.svg";
-
+import Github from "../../img/Landing Page/Github.svg";
 import { gsap } from "gsap";
 import { Link as SLink } from "react-scroll";
 import { Link } from "react-router-dom";
@@ -444,12 +444,12 @@ const LandingPage = () => {
                 <div>Algorithm</div>
               </SLink>
               <SLink to="about" smooth={true} duration={2100}>
-                <div>About</div>
+                <div>Playground</div>
               </SLink>
 
             </div>
           </div>
-
+          <a href="https://github.com/Ishan-Shukla/DSAone/tree/build" target="_blank"><img className="h-12 w-12 ml-28" src={Github}></img></a>
         </div>
       </div>
       <div className="bg-horizon h-screen w-screen relative" id="main">
@@ -587,20 +587,19 @@ const LandingPage = () => {
           <div className="basis-1/2 relative" ref={Container3Ref}>
             <div className="absolute w-full h-3/4 top-12 flex flex-col">
               <div className="text-plain-white flex flex-col" ref={Heading3Ref}>
-                <div className="text-9xl pt-4 pl-24">ABOUT</div>
-                <div className="text-7xl self-end p-4 pr-24">PROJECT</div>
+                <div className="text-9xl pt-4 pl-24">PLAY</div>
+                <div className="text-7xl self-end p-4 pr-24">GROUND</div>
               </div>
               <div className=" w-3/4 self-center p-4 text-xl" ref={Data3Ref}>
-                Data Structure is a way to store and organize data so that it
-                can be used efficiently. Our Data Structure tutorial includes
-                all important topics of Data Structure such as Array, Trees,
-                Linked List, Stack, Queue, Graph etc.
+                Worry about how algorithms work don't need to panic. The best way to
+                Learn Algorithms is to visualize it.So come to our PlayGround
+                We will be visualizing together with fun .
               </div>
               <Link className="self-end mr-32 cursor-pointer" to={"/PlayGround"}>
                 <div
                   className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl"
                   ref={Button3Ref}>
-                  Visit Github
+                  Go & Play
                 </div>
               </Link>
             </div>
