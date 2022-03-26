@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ViewCard from "../../Components/ViewCard";
 import { getCourses } from "./Data";
 const Content = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const Courses = getCourses();
   return (
     <div className="bg-primary-1 min-h-screen max-h-full min-w-full relative">
@@ -15,7 +18,11 @@ const Content = () => {
                   className="ml-6"
                   to={`/DataStructure/${course.index}`}
                   key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img} />
+                  <ViewCard
+                    name={course.name}
+                    index={course.index}
+                    image={course.img}
+                  />
                 </Link>
               </div>
             ))}

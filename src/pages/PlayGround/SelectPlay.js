@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { getVisualizations } from './Data'
 const SelectPlay = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const visualizations = getVisualizations();
   return (
     <div className="bg-primary-1 w-screen h-screen relative">

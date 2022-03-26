@@ -335,18 +335,19 @@ const LandingPage = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     window.addEventListener("scroll", listenToScroll);
     return () => window.removeEventListener("scroll", listenToScroll);
   }, []);
 
   useEffect(() => {
     scrollAnimations();
-    return () => { };
+    return () => {};
   }, [scrollAnimations]);
 
   useEffect(() => {
     meteors();
-    return () => { };
+    return () => {};
   }, []);
 
   const meteors = () => {
@@ -446,10 +447,13 @@ const LandingPage = () => {
               <SLink to="about" smooth={true} duration={2100}>
                 <div>Playground</div>
               </SLink>
-
             </div>
           </div>
-          <a href="https://github.com/Ishan-Shukla/DSAone/tree/build" target="_blank"><img className="h-12 w-12 ml-28" src={Github}></img></a>
+          <a
+            href="https://github.com/Ishan-Shukla/DSAone/tree/build"
+            target="_blank">
+            <img className="h-12 w-12 ml-28" src={Github}></img>
+          </a>
         </div>
       </div>
       <div className="bg-horizon h-screen w-screen relative" id="main">
@@ -591,11 +595,13 @@ const LandingPage = () => {
                 <div className="text-7xl self-end p-4 pr-24">GROUND</div>
               </div>
               <div className=" w-3/4 self-center p-4 text-xl" ref={Data3Ref}>
-                Worry about how algorithms work don't need to panic. The best way to
-                Learn Algorithms is to visualize it.So come to our PlayGround
-                We will be visualizing together with fun .
+                Worry about how algorithms work don't need to panic. The best
+                way to Learn Algorithms is to visualize it.So come to our
+                PlayGround We will be visualizing together with fun .
               </div>
-              <Link className="self-end mr-32 cursor-pointer" to={"/PlayGround"}>
+              <Link
+                className="self-end mr-32 cursor-pointer"
+                to={"/PlayGround"}>
                 <div
                   className=" w-fit p-4 rounded-full bg-primary-3 text-plain-white text-2xl"
                   ref={Button3Ref}>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ViewCard from "../../Components/AViewCard";
 import { getCourses } from "./Data";
@@ -6,6 +6,9 @@ import { getTree } from "./Data";
 import { getGreedy } from "./Data";
 import { getDynamic } from "./Data";
 const AContent = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const Courses = getCourses();
   const Tree = getTree();
   const Greedy = getGreedy();
