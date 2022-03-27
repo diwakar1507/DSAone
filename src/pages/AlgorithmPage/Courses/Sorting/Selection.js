@@ -1,9 +1,9 @@
-import one from "../../../img/Algo/Selection Sort/one.svg";
-import two from "../../../img/Algo/Selection Sort/two.svg";
-import three from "../../../img/Algo/Selection Sort/three.svg";
-import four from "../../../img/Algo/Selection Sort/four.svg";
-import five from "../../../img/Algo/Selection Sort/five.svg";
-import six from "../../../img/Algo/Selection Sort/six.svg";
+import one from "../../../../img/Algo/Selection Sort/one.svg";
+import two from "../../../../img/Algo/Selection Sort/two.svg";
+import three from "../../../../img/Algo/Selection Sort/three.svg";
+import four from "../../../../img/Algo/Selection Sort/four.svg";
+import five from "../../../../img/Algo/Selection Sort/five.svg";
+import six from "../../../../img/Algo/Selection Sort/six.svg";
 import seven from "../../../../img/Algo/Selection Sort/seven.svg";
 import eight from "../../../../img/Algo/Selection Sort/eight.svg";
 import nine from "../../../../img/Algo/Selection Sort/nine.svg";
