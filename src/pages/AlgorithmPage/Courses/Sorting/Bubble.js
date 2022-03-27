@@ -1,4 +1,13 @@
 import React from "react";
+import one from "../../../../img/Algo/Bubble Sort/one.svg";
+import two from "../../../../img/Algo/Bubble Sort/two.svg";
+import three from "../../../../img/Algo/Bubble Sort/three.svg";
+import four from "../../../../img/Algo/Bubble Sort/four.svg";
+import five from "../../../../img/Algo/Bubble Sort/five.svg";
+import six from "../../../../img/Algo/Bubble Sort/six.svg";
+import seven from "../../../../img/Algo/Bubble Sort/seven.svg";
+import eight from "../../../../img/Algo/Bubble Sort/eight.svg";
+import nine from "../../../../img/Algo/Bubble Sort/nine.svg";
 const Bubble = () => {
 
     return (
@@ -29,50 +38,49 @@ const Bubble = () => {
             Consider the following array: Arr=14, 33, 27, 35, 10. We need to sort this array using bubble sort algorithm.
             <br /><br />
             Initial array
-            <br /><br />
+            <br /><br /><img src={one.svg} />
             First Pass:
             <br /><br />
             We proceed with the first and second element i.e., Arr[0] and Arr[1]. Check if 14 {'>'} 33 which is false. So, no swapping happens and the array remains the same.
-            <br /><br />
-
-
+            <img src={one.svg} />
             We proceed with the second and third element i.e., Arr[1] and Arr[2]. Check if 33 {'>'} 27 which is true. So, we swap Arr[1] and Arr[2].
-            <br /><br />
+            <img src={two.svg} />
 
             Thus the array becomes:
-            <br /><br />
+            <img src={three.svg} />
 
             We proceed with the third and fourth element i.e., Arr[2] and Arr[3]. Check if 33 {'>'} 35 which is false. So, no swapping happens and the array remains the same.
-            <br /><br />
+            <img src={three.svg} />
 
 
             We proceed with the fourth and fifth element i.e., Arr[3] and Arr[4]. Check if 35 {'>'} 10 which is true. So, we swap Arr[3] and Arr[4].
-            <br /><br />
+            <img src={four.svg} />
 
             Thus, after swapping the array becomes:
-            <br /><br />
+            <img src={five.svg} />
+
 
             Thus, marks the end of the first pass, where the Largest element reaches its final(last) position.
-            <br /><br />
+
+
             Second Pass:
             <br /><br />
             We proceed with the first and second element i.e., Arr[0] and Arr[1]. Check if 14 {'>'} 27 which is false. So, no swapping happens and the array remains the same.
-            <br /><br />
+            <img src={five.svg} />
 
             We now proceed with the second and third element i.e., Arr[1] and Arr[2]. Check if 27 {'>'} 33 which is false. So, no swapping happens and the array remains the same.
             <br /><br />
             We now proceed with the third and fourth element i.e., Arr[2] and Arr[3]. Check if 33 {'>'} 10 which is true. So, we swap Arr[2] and Arr[3].
-            <br /><br />
+            <img src={six.svg} />
 
             Now, the array becomes
-            <br /><br />
-
-            Thus marks the end of second pass where the second largest element in the array has occupied its correct position.
+            <img src={seven.svg} />
+            Thus marks the end of second pass where the second largest element in the array has occupied its correct position
             <br /><br />
             Third Pass:
             <br /><br />
             After the third pass, the third largest element will be at the third last position in the array.
-            <br /><br />
+            <img src={eight.svg} />
             enter image description here
             <br /><br />
             .
@@ -94,6 +102,7 @@ const Bubble = () => {
             After doing all the passes, we can easily see the array will be sorted.
             <br /><br />
             Thus, the sorted array will look like this.
+            <img src={nine.svg} />
             <div className="text-3xl py-5 text-yellow-100">Complexity Analysist</div>
             <div className="text-2xl py-5 text-yellow-100">Time Complexity of Bubble sort</div>
             <div className="pl-5">

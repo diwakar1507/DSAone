@@ -1,3 +1,8 @@
+import one from "../../../../img/Algo/Insertion Sort/one.svg";
+import two from "../../../../img/Algo/Insertion Sort/two.svg";
+import three from "../../../../img/Algo/Insertion Sort/three.svg";
+import four from "../../../../img/Algo/Insertion Sort/four.svg";
+
 const Insertion = () => {
     return (
         <div className="text-xl py-10 px-14 bg-primary-1 text-white">
@@ -20,13 +25,14 @@ const Insertion = () => {
             Consider the following array: 25, 17, 31, 13, 2<br />
             First Iteration: Compare 25 with 17. The comparison shows 17{'<'} 25. Hence swap 17 and 25.<br />
             The array now looks like : 17, 25, 31, 13, 2
+            <img src={one.svg} />
             <br />
             Second Iteration: Begin with the second element (25), but it was already swapped on for the correct position, so we move ahead to the next element.
             <br />
             Now hold on to the third element (31) and compare with the ones preceding it . Since 31{'>'} 25, no swapping takes place. Also, 31{'>'}17, no swapping takes place and 31 remains at its position.
             <br />
             The array after the Second iteration looks like: 17, 25, 31, 13, 2
-            <br />
+            <img src={two.svg} />
             Third Iteration: Start the following Iteration with the fourth element (13), and compare it with its preceding elements. Since 13{'<'} 31, we swap the two.
             <br />
             Array now becomes: 17, 25, 13, 31, 2.
@@ -38,7 +44,7 @@ const Insertion = () => {
             The last comparison for the iteration is now between 17 and 13. Since 13 {'<'} 17, we swap the two.
             <br />
             The array now becomes 13, 17, 25, 31, 2.
-            <br />
+            <img src={three.svg} />
             Fourth Iteration: The last iteration calls for the comparison of the last element (2), with all the preceding elements and make the appropriate swapping between elements. Since, 2{'<'} 31. Swap 2 and 31.
             <br />
             Array now becomes: 13, 17, 25, 2, 31.
@@ -55,6 +61,7 @@ const Insertion = () => {
             The array now becomes: 2, 13, 17, 25, 31.
             <br />
             This is the final array after all the corresponding iterations and swapping of elements.
+            <img src={four.svg} />
             <div className="text-3xl py-5 text-yellow-100">Time Complexity Analysis:</div>
             Even though insertion sort is efficient, still, if we provide an already sorted array to the insertion sort algorithm, it will still execute the outer for loop, thereby requiring n steps to sort an already sorted array of n elements, which makes its best case time complexity a linear function of n.
             <br /><br />

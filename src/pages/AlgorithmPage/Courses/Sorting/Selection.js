@@ -1,3 +1,12 @@
+import one from "../../../img/Algo/Selection Sort/one.svg";
+import two from "../../../img/Algo/Selection Sort/two.svg";
+import three from "../../../img/Algo/Selection Sort/three.svg";
+import four from "../../../img/Algo/Selection Sort/four.svg";
+import five from "../../../img/Algo/Selection Sort/five.svg";
+import six from "../../../img/Algo/Selection Sort/six.svg";
+import seven from "../../../../img/Algo/Selection Sort/seven.svg";
+import eight from "../../../../img/Algo/Selection Sort/eight.svg";
+import nine from "../../../../img/Algo/Selection Sort/nine.svg";
 const Selection = () => {
     return (
         <div className="text-xl py-10 px-14 bg-primary-1 text-white">
@@ -10,64 +19,62 @@ const Selection = () => {
             <li>Swap it with the leftmost element of the unsorted subarray.</li>
             <li> Now the leftmost element of unsorted subarray becomes a part (rightmost) of sorted subarray and will not be a part of unsorted subarray.</li>
             <div className="text-3xl py-5 text-yellow-100">A selection sort works as follows : </div>
+            <img src={one.svg} />
             This is our initial array A = [5, 2, 6, 7, 2, 1, 0, 3]
-
-
-
+            <img src={two.svg} />
             Leftmost element of unsorted part = A[0]
-
+            <br />
             Minimum element of unsorted part = A[6]
-
+            <br />
             We will swap A[0] and A[6] then, make A[0] part of sorted subarray.
-
-
+            <img src={three.svg} />
 
             Leftmost element of unsorted part = A[1]
-
+            <br />
             Minimum element of unsorted part = A[5]
-
+            <br />
             We will swap A[1] and A[5] then, make A[1] part of sorted subarray.
-
+            <img src={four.svg} />
 
 
             Leftmost element of unsorted part = A[2]
-
+            <br />
             Minimum element of unsorted part = A[4]
-
+            <br />
             We will swap A[2] and A[4] then, make A[2] part of sorted subarray.
-
+            <img src={five.svg} />
 
 
             Leftmost element of unsorted part = A[3]
-
+            <br />
             Minimum element of unsorted part = A[5]
-
+            <br />
             We will swap A[3] and A[5] then, make A[3] part of sorted subarray.
 
-
+            <img src={six.svg} />
 
             Leftmost element of unsorted part = A[4]
-
+            <br />
             Minimum element of unsorted part = A[7]
-
+            <br />
             We will swap A[4] and A[7] then, make A[4] part of sorted subarray.
 
-
+            <img src={seven.svg} />
 
             Leftmost element of unsorted part = A[5]
-
+            <br />
             Minimum element of unsorted part = A[6]
-
+            <br />
             We will swap A[5] and A[6] then, make A[5] part of sorted subarray.
 
-
+            <img src={eight.svg} />
 
             Leftmost element of unsorted part = A[6]
-
+            <br />
             Minimum element of unsorted part = A[7]
-
+            <br />
             We will swap A[6] and A[7] then, make A[6] part of sorted subarray.
-
+            <img src={nine.svg} />
 
 
             This is the final sorted array.

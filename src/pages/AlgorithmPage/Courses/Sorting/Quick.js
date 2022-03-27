@@ -1,4 +1,5 @@
 import React from "react";
+import one from "../../../../img/Algo/Quick Sort/one.svg";
 const Quick = () => {
 
     return (
@@ -74,11 +75,7 @@ const Quick = () => {
             9, 18, 23, 32, 50, 61.
             <br />
             The following diagram depicts the workflow of the Quick Sort algorithm which was described above.
-
-
-
-
-
+            <img src={one.svg} />
             <div className="text-3xl py-5 text-yellow-100">Complexity Analysist</div>
             <div className="text-2xl py-5 text-yellow-100">Time Complexity of Quick sort</div>
             <div className="pl-5">

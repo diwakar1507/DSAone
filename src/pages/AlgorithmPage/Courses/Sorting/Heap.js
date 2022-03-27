@@ -1,3 +1,8 @@
+import one from "../../../../img/Algo/Heap Sort/one.svg";
+import two from "../../../../img/Algo/Heap Sort/two.svg";
+import three from "../../../../img/Algo/Heap Sort/three.svg";
+import four from "../../../../img/Algo/Heap Sort/four.svg";
+
 import React from "react";
 const Heap = () => {
 
@@ -17,11 +22,9 @@ const Heap = () => {
 
             <div className="text-3xl py-5 text-yellow-100">Example:</div>
             In the diagram below,initially there is an unsorted array Arr having 6 elements and then max-heap will be built.
-            <br />
-            enter image description here
-            <br />
+            <img src={one.svg} />
             After building max-heap, the elements in the array  will be:
-            <br />
+            <img src={two.svg} />
             enter image description here
             <br />
             <li>Step 1: 8 is swapped with 5.</li>
@@ -34,6 +37,9 @@ const Heap = () => {
             <li>Step 8: 4 is disconnected from heap.</li>
             <li>Step 9: Max heap is created and 3 is swapped with 1.</li>
             <li>Step 10: 3 is disconnected.</li>
+            <img src={three.svg} />
+            After all the steps, we will get a sorted array.
+            <img src={four.svg} />
         </div>
 
     );

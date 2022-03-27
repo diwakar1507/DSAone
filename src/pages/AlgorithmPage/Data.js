@@ -17,8 +17,6 @@ import pm1 from "../../img/Algo/pm1.png"
 import floyd from "../../img/Algo/floyd.svg"
 import bellman from "../../img/Algo/bellman.svg"
 import knapsack1 from "../../img/Algo/knapsack1.svg"
-import lcs from "../../img/Algo/lcs.svg"
-import Tsp from "../../img/Algo/Tsp.svg"
 import Bubble from "./Courses/Sorting/Bubble";
 import Selection from "./Courses/Sorting/Selection";
 import Insertion from "./Courses/Sorting/Insertion";
@@ -37,9 +35,8 @@ import Prims from "./Courses/Greedy/Prims";
 import Kruskals from "./Courses/Greedy/Kruskals";
 import Knapsack1 from "./Courses/Dynamic/Knapsack1";
 import FW from "./Courses/Dynamic/FW";
-import LCS from "./Courses/Dynamic/LCS";
 import BF from "./Courses/Dynamic/BF";
-import TS from "./Courses/Dynamic/TS";
+
 let Courses = [
   {
     name: "Bubble Sort",
@@ -104,7 +101,7 @@ let Tree = [
     name: "DFS",
     index: 2,
     img: dfs,
-    page: Bfs
+    page: Dfs
   },
   {
     name: "Level Order",
@@ -166,18 +163,6 @@ let Dynamic = [
     index: 3,
     img: knapsack1,
     page: Knapsack1
-  },
-  {
-    name: "Longest common Subsequence",
-    index: 4,
-    img: lcs,
-    page: LCS
-  },
-  {
-    name: "Travelling Salesman",
-    index: 5,
-    img: Tsp,
-    page: TS
   },
 
 ];
