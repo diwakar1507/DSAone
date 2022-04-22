@@ -1,10 +1,9 @@
 import React from "react";
 
-export const Info = ({comparisionCount, children }) => {
+export const Info = ({ comparisionCount, children }) => {
   return (
-      <div>
-        Comparisions: <strong>{comparisionCount}</strong>
-      </div>
+    <div>
+      Comparisions: <strong>{comparisionCount}</strong>
+    </div>
   );
 };
-

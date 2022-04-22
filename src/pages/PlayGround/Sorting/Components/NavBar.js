@@ -17,7 +17,9 @@ const NavBar = () => {
   return (
     <div className="w-full">
       <div className="flex items-center justify-center backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
-        <div className="basis-1/12"><GoBack url="/PlayGround" /></div>
+        <div className="basis-1/12">
+          <GoBack url="/PlayGround" />
+        </div>
         <div className="basis-10/12 text-center text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
           Sorting Algos
         </div>

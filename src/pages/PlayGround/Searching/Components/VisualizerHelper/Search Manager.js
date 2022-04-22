@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useControls, useData } from "../../Common/store";
 import { delay } from "../../../Common/helper";
-import shallow from "zustand/shallow";
 import { Timer } from "./Timer";
 import { Info } from "./Info";
 import ArrayContainer from "./ArrayContainer";

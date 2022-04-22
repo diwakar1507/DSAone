@@ -45,8 +45,7 @@ export default class Node extends Component {
         ].join(" ")}
         onMouseDown={(e) => onMouseDown(e, row, col, isStart, isFinish)}
         onMouseEnter={() => onMouseEnter(row, col)}
-        onMouseUp={() => onMouseUp()}
-      ></div>
+        onMouseUp={() => onMouseUp()}></div>
     );
   }
 }

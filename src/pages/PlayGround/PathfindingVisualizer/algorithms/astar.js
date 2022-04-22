@@ -52,32 +52,31 @@ function aStar(grid, animations, startNode, endNode) {
   let visitedOrder = [];
   // While the OPEN set is not empty, do...
   while (!OPEN.isEmpty()) {
-      //Find node with the least f cost in the Open List
-      let current = OPEN.dequeue();
-      // Add current node to the Closed List
-      current.isVisited = true;
-      if(animations) current.isAnimated = true;
-      visitedOrder.push(current);
-      // Path has been found to endNode
-      if(current === endNode) {
-            return visitedOrder;
+    //Find node with the least f cost in the Open List
+    let current = OPEN.dequeue();
+    // Add current node to the Closed List
+    current.isVisited = true;
+    if (animations) current.isAnimated = true;
+    visitedOrder.push(current);
+    // Path has been found to endNode
+    if (current === endNode) {
+      return visitedOrder;
+    }
+    // Grab the unvisited neighbors of current
+    let neighbors = getNeighbors(current, grid);
+    // For each of the unvisited neighbors of current
+    for (let neighbor of neighbors) {
+      let tempG = current.gcost + 1;
+      if (tempG < neighbor.gcost) {
+        neighbor.previousNode = current;
+        neighbor.gcost = tempG;
+        neighbor.hcost = calcHVal(neighbor, endNode);
+        neighbor.fcost = neighbor.gcost + neighbor.hcost;
+        if (!OPEN.find(neighbor)) {
+          OPEN.enqueue(neighbor);
+        }
       }
-      // Grab the unvisited neighbors of current
-      let neighbors = getNeighbors(current, grid);
-      // For each of the unvisited neighbors of current
-      for(let neighbor of neighbors) {
-            let tempG = current.gcost + 1;
-            if(tempG < neighbor.gcost) {
-                  neighbor.previousNode = current;
-                  neighbor.gcost = tempG;
-                  neighbor.hcost = calcHVal(neighbor, endNode);
-                  neighbor.fcost = neighbor.gcost + neighbor.hcost;
-                  if(!OPEN.find(neighbor)) {
-                        OPEN.enqueue(neighbor);
-                  }
-            }
-      }
-
+    }
   }
   return visitedOrder;
 }
@@ -109,5 +108,7 @@ function calcHVal(node, endNode) {
   // return Math.abs(node.row - endNode.row) +  Math.abs(node.col - endNode.col);
 
   // Euclidean distance
-  return Math.sqrt(Math.pow(node.row - endNode.row,2) + Math.pow(node.col - endNode.col,2));
+  return Math.sqrt(
+    Math.pow(node.row - endNode.row, 2) + Math.pow(node.col - endNode.col, 2)
+  );
 }

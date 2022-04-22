@@ -3,21 +3,8 @@ import { useControls, useData } from "../../Common/store";
 import { ArrayContainer } from "./ArrayContainer";
 import { MergeContainer } from "./MergeContainer";
 import { delay } from "../../../Common/helper";
-import shallow from "zustand/shallow";
 import { Timer } from "./Timer";
 import { Info } from "./Info";
-
-// let compareTime = useControls.getState().compareTime;
-// let swapTime = useControls.getState().swapTime;
-
-// useControls.subscribe(
-//   ([cTime, sTime]) => {
-//     compareTime = cTime;
-//     swapTime = sTime;
-//   },
-//   (state) => [state.compareTime, state.swapTime],
-//   shallow
-// );
 
 export const SortManager = React.memo(function ({
   array,
@@ -59,15 +46,6 @@ export const SortManager = React.memo(function ({
 
   useEffect(() => {
     progress.current = useControls.getState().progress;
-    // useControls.subscribe(
-    //   (value) => {
-    //     progress.current = value;
-        
-    //     if (progress.current === "start") runAlgo();
-    //     if (progress.current === "reset") reset();
-    //   },
-    //   (state) => state.progress,
-    // );
     useControls.subscribe(
       (state) => {
         progress.current = state.progress;
@@ -79,8 +57,7 @@ export const SortManager = React.memo(function ({
     useControls.subscribe((state) => {
       if (compareTime !== state.compareTime)
         compareTime.current = state.compareTime;
-      if (swapTime !== state.swapTime)
-        swapTime.current = state.swapTime;
+      if (swapTime !== state.swapTime) swapTime.current = state.swapTime;
     });
     return () => {
       isComponentUnMounted.current = true;
@@ -119,7 +96,7 @@ export const SortManager = React.memo(function ({
     algoArray.current[i] = algoArray.current[j];
     algoArray.current[j] = tmp;
     setSwapIndices([i, j]);
-    
+
     pivot.current = -1;
     swapCount.current += 1;
     await delay(swapTime.current);
@@ -169,21 +146,20 @@ export const SortManager = React.memo(function ({
   return (
     <div className="p-3 border-2 border-primary-3">
       <div className="flex justify-between items-center gap-x-5">
-        <strong className="text-primary-3 border-b border-primary-3">{sortingAlgorithmName}</strong>
+        <strong className="text-primary-3 border-b border-primary-3">
+          {sortingAlgorithmName}
+        </strong>
         <div className="flex gap-x-1 justify-end">
           <span>Time:</span>
           <strong>
-            <Timer
-              isAlgoExecutionOver={isAlgoExecutionOver.current}
-            />
+            <Timer isAlgoExecutionOver={isAlgoExecutionOver.current} />
           </strong>
         </div>
       </div>
       {sortingAlgorithmName === "MergeSort" ? mergeContainer : arrayContainer}
       <Info
         swapCount={swapCount.current}
-        comparisionCount={comparisionCount.current}
-      ></Info>
+        comparisionCount={comparisionCount.current}></Info>
     </div>
   );
 });

@@ -51,15 +51,15 @@ i:nth-child(3n + 3) {
   0% {
     transform: translateY(-200px);
   }
-  100%{
-      transform: translateY(calc(100vh + 200px));
+  100% {
+    transform: translateY(calc(100vh + 200px));
   }
 }
 
 .scroll-track {
 }
 
-.marquee{
+.marquee {
   width: 100vw;
   height: 2rem;
   overflow: hidden;
@@ -67,7 +67,8 @@ i:nth-child(3n + 3) {
   position: relative;
 }
 
-.marquee::before, .marquee::after{
+.marquee::before,
+.marquee::after {
   position: absolute;
   top: 0;
   width: 10rem;
@@ -76,26 +77,26 @@ i:nth-child(3n + 3) {
   z-index: 1;
 }
 
-.marquee::before{
+.marquee::before {
   left: 0;
   background: linear-gradient(to right, #222831 0%, transparent 100%);
 }
 
-.marquee::after{
+.marquee::after {
   right: 0;
   background: linear-gradient(to left, #222831 0%, transparent 100%);
 }
 
-.scroll1{
+.scroll1 {
   animation: scrolling 20s linear 0.2s infinite;
 }
 
-.scroll2{
+.scroll2 {
   animation: scrolling 19s linear infinite;
 }
 
-.scroll-track li{
-  display:flex;
+.scroll-track li {
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 5vw;
@@ -106,10 +107,10 @@ i:nth-child(3n + 3) {
 }
 
 @keyframes scrolling {
-  0%{
+  0% {
     transform: translateX(0);
   }
-  100%{
+  100% {
     transform: translateX(calc(-5vw * 20));
   }
 }

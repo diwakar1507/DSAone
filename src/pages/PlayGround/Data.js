@@ -1,6 +1,6 @@
 import Sorting from "./Sorting/SortPlayground";
 import Searching from "./Searching/SearchPlayground";
-import PathfindingVisualizer from "./PathfindingVisualizer/PathfindingVisualizer"
+import PathfindingVisualizer from "./PathfindingVisualizer/PathfindingVisualizer";
 
 let Visualizations = [
   {

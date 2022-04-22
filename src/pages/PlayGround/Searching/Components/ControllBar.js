@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { VscDebugStart } from "react-icons/vsc";
 import { VscDebugRestart } from "react-icons/vsc";
 import { ImPause } from "react-icons/im";

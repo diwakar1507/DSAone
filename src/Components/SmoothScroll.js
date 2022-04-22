@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
 import useWindowSize from "../hooks/useWindowSize";
 
 const SmoothScroll = ({ children }) => {
@@ -32,10 +31,7 @@ const SmoothScroll = ({ children }) => {
     data.current = window.scrollY;
     data.previous += (data.current - data.previous) * data.ease;
     data.rounded = Math.round(data.previous * 100) / 100;
-
     scrollingContainerRef.current.style.transform = `translateY(-${data.previous}px)`;
-
-    // Recursive call
     requestAnimationFrame(() => smoothScrollingHandler());
   };
 

@@ -1,5 +1,3 @@
-
-
 /* Grid styles */
 .Grid {
   display: grid;
@@ -27,4 +25,3 @@
   display: flex;
   flex-direction: column;
 }
-

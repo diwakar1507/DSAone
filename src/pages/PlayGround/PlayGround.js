@@ -1,10 +1,8 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
+import React from "react";
+import { Outlet } from "react-router-dom";
 
 const PlayGround = () => {
-  return (
-    <Outlet/>
-  )
-}
+  return <Outlet />;
+};
 
-export default PlayGround
+export default PlayGround;

@@ -10,13 +10,9 @@ import {
 import { useControls } from "../../Common/store";
 
 let swapTime = useControls.getState().swapTime;
-// useControls.subscribe(
-//   (time) => (swapTime = time),
-//   (state) => state.swapTime
-// );
+
 useControls.subscribe((state) => {
-  if (swapTime !== state.swapTime)
-    swapTime = state.swapTime;
+  if (swapTime !== state.swapTime) swapTime = state.swapTime;
 });
 
 const AnimatedItem = styled(ArrayItem)`
@@ -74,48 +70,45 @@ export function MergeContainer({
   }
 
   return (
-      <ArrayHolder>
-        {items.map((value, i) => {
-          if (i === destination) {
-            return (
-              <AnimatedItem
-                key={i + ":" + value}
-                style={{
-                  order: source + 1,
-                  backgroundColor: getBackgroundColor(i),
-                }}
-                distance={source - destination}
-              >
-                {value}
-              </AnimatedItem>
-            );
-          } else if (i > destination && i <= source) {
-            return (
-              <MoveItem
-                key={i + ":" + value}
-                style={{
-                  order: i,
-                  backgroundColor: getBackgroundColor(i),
-                  transform: "translate(50px)",
-                }}
-              >
-                {value}
-              </MoveItem>
-            );
-          } else {
-            return (
-              <ArrayItem
-                key={i + ":" + value}
-                style={{
-                  order: i,
-                  backgroundColor: getBackgroundColor(i),
-                }}
-              >
-                {value}
-              </ArrayItem>
-            );
-          }
-        })}
-      </ArrayHolder>
+    <ArrayHolder>
+      {items.map((value, i) => {
+        if (i === destination) {
+          return (
+            <AnimatedItem
+              key={i + ":" + value}
+              style={{
+                order: source + 1,
+                backgroundColor: getBackgroundColor(i),
+              }}
+              distance={source - destination}>
+              {value}
+            </AnimatedItem>
+          );
+        } else if (i > destination && i <= source) {
+          return (
+            <MoveItem
+              key={i + ":" + value}
+              style={{
+                order: i,
+                backgroundColor: getBackgroundColor(i),
+                transform: "translate(50px)",
+              }}>
+              {value}
+            </MoveItem>
+          );
+        } else {
+          return (
+            <ArrayItem
+              key={i + ":" + value}
+              style={{
+                order: i,
+                backgroundColor: getBackgroundColor(i),
+              }}>
+              {value}
+            </ArrayItem>
+          );
+        }
+      })}
+    </ArrayHolder>
   );
 }

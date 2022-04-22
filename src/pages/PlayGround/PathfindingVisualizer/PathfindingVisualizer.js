@@ -14,7 +14,6 @@ import minus from "../../../img/Algo/minus.svg";
 import Node from "./Node/Node";
 // Import header and footer components
 import Header from "./Header/header";
-import { Link } from "react-router-dom";
 import { GoBack } from "../../../Components/GoBack";
 
 // Define Grid constants
@@ -614,7 +613,7 @@ const PathfindingVisualizer = (props) => {
           <GoBack url="/PlayGround" />
         </div>
         <div className="basis-10/12 text-center text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
-        PathFinding Visualizer
+          PathFinding Visualizer
         </div>
         <div className="basis-1/12"></div>
       </div>

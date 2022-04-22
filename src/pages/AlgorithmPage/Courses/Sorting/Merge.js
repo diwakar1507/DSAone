@@ -11,7 +11,7 @@ const Merge = () => {
       list into several sublists until each sublist consists of a single element
       and merging those sublists in a manner that results into a sorted list.
       <div className="text-3xl py-5 text-yellow-100">
-        A merge sort works as follows:{" "}
+        A merge sort works as follows:
       </div>
       <div className="text-2xl py-5 text-yellow-100">
         Top-down Merge Sort Implementation:
@@ -25,7 +25,6 @@ const Merge = () => {
       <br />
       Example: Let us consider an example to understand the approach better.
       <li>
-        {" "}
         Divide the unsorted list into n sublists, each comprising 1 element (a
         list of 1 element is supposed sorted).
       </li>

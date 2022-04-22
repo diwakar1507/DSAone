@@ -12,4 +12,3 @@ export const Info = ({ swapCount, comparisionCount, children }) => {
     </div>
   );
 };
-

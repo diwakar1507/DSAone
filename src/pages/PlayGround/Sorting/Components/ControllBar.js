@@ -78,7 +78,9 @@ const ControllBar = () => {
   const resetElement = (
     <VscDebugRestart onClick={resetSorting} color={"#FD7014"} size={"30px"} />
   );
-  const disabledPauseElement = <ImPause style={{ color: "#d1d1d1" }} size={"30px"}/>;
+  const disabledPauseElement = (
+    <ImPause style={{ color: "#d1d1d1" }} size={"30px"} />
+  );
 
   async function pauseAndDelaySorting() {
     pauseSorting();

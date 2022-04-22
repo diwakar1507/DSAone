@@ -29,19 +29,16 @@ const Insertion = () => {
       </div>
       <div className="pl-5 text-slate-50">
         <li>
-          {" "}
           The first step involves the comparison of the element in question with
           its adjacent element.
         </li>
         <li>
-          {" "}
           And if at every comparison reveals that the element in question can be
           inserted at a particular position, then space is created for it by
           shifting the other elements one position to the right and inserting
           the element at the suitable position.
         </li>
         <li>
-          {" "}
           The above procedure is repeated until all the element in the array is
           at their apt position.
         </li>
@@ -76,7 +73,7 @@ const Insertion = () => {
       <br />
       The array becomes 17, 13, 25, 31, 2.
       <br />
-      The last comparison for the iteration is now between 17 and 13. Since 13{" "}
+      The last comparison for the iteration is now between 17 and 13. Since 13
       {"<"} 17, we swap the two.
       <br />
       The array now becomes 13, 17, 25, 31, 2.

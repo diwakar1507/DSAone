@@ -20,69 +20,82 @@ const AContent = () => {
           <div className="text-4xl text-center mt-5 scale text-white mb-10">
             Searching & Sorting
             <div className="grid grid-cols-1 sm:grid-cols-2 text-xl text-left lg:grid-cols-4 gap-y-1 gap-x-20 pt-2">
-            {Courses.map((course) => (
-              <div key={course.index}>
-                <Link
-                  className="ml-6"
-                  to={`/Algorithm/${course.index}`}
-                  key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img}/>
-                </Link>
-              </div>
-            ))}
+              {Courses.map((course) => (
+                <div key={course.index}>
+                  <Link
+                    className="ml-6"
+                    to={`/Algorithm/${course.index}`}
+                    key={course.index}>
+                    <ViewCard
+                      name={course.name}
+                      index={course.index}
+                      image={course.img}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          
-          </div>
-          <hr></hr>    
+          <hr></hr>
           <div className="text-4xl text-center text-white  my-10">
             Tree Traversals
             <div className="grid grid-cols-1 sm:grid-cols-2 text-xl text-left lg:grid-cols-3 gap-y-1 gap-x-20 pt-2">
-            {Tree.map((course) => (
-              <div key={course.index}>
-                <Link
-                  className="ml-6"
-                  to={`/Algorithm/${course.index}`}
-                  key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img}/>
-                </Link>
-              </div>
-            ))}
+              {Tree.map((course) => (
+                <div key={course.index}>
+                  <Link
+                    className="ml-6"
+                    to={`/Algorithm/${course.index}`}
+                    key={course.index}>
+                    <ViewCard
+                      name={course.name}
+                      index={course.index}
+                      image={course.img}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          </div>
-          <hr></hr>  
+          <hr></hr>
           <div className="text-4xl text-center text-white my-10">
-           Greedy Algorithms
+            Greedy Algorithms
             <div className="grid grid-cols-1 sm:grid-cols-2 text-xl text-left lg:grid-cols-3 gap-y-1 gap-x-20 pt-2">
-            {Greedy.map((course) => (
-              <div key={course.index}>
-                <Link
-                  className="ml-6"
-                  to={`/Algorithm/${course.index}`}
-                  key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img}/>
-                </Link>
-              </div>
-            ))}
+              {Greedy.map((course) => (
+                <div key={course.index}>
+                  <Link
+                    className="ml-6"
+                    to={`/Algorithm/${course.index}`}
+                    key={course.index}>
+                    <ViewCard
+                      name={course.name}
+                      index={course.index}
+                      image={course.img}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          </div>
-          <hr></hr>  
+          <hr></hr>
           <div className="text-4xl text-center text-white mt-10">
             Dynamic Algorithms
             <div className="grid grid-cols-1 text-left sm:grid-cols-2 text-xl lg:grid-cols-3 gap-y-1 gap-x-20 pt-2">
-            {Dynamic.map((course) => (
-              <div key={course.index}>
-                <Link
-                  className="ml-6"
-                  to={`/Algorithm/${course.index}`}
-                  key={course.index}>
-                  <ViewCard name={course.name} index={course.index} image={course.img}/>
-                </Link>
-              </div>
-            ))}
+              {Dynamic.map((course) => (
+                <div key={course.index}>
+                  <Link
+                    className="ml-6"
+                    to={`/Algorithm/${course.index}`}
+                    key={course.index}>
+                    <ViewCard
+                      name={course.name}
+                      index={course.index}
+                      image={course.img}
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
-          </div>
-           
-
         </div>
       </div>
     </div>

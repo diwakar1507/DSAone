@@ -9,11 +9,11 @@ const CourseAlgo = () => {
   let params = useParams();
   const Course = getCourse(parseInt(params.courseID, 10));
 
-  return(
+  return (
     <div className="bg-primary-1 pt-10">
       <Course />
     </div>
-  ) ;
+  );
 };
 
 export default CourseAlgo;

@@ -4,15 +4,9 @@ import {
   visistedColor,
   foundColor,
 } from "../../Common/config";
-import { useControls } from "../../Common/store";
 import { ArrayHolder, ArrayItem } from "../../Common/Animations";
 
-const ArrayContainer = ({
-  array,
-  highlightIndex,
-  checkedIndices,
-  foundAt,
-}) => {
+const ArrayContainer = ({ array, highlightIndex, checkedIndices, foundAt }) => {
   function getBackgroundColor(i) {
     if (foundAt === i) {
       return foundColor;

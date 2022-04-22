@@ -23,12 +23,11 @@ const Selection = () => {
       <li>Pick the minimum element from the unsorted subarray.</li>
       <li>Swap it with the leftmost element of the unsorted subarray.</li>
       <li>
-        {" "}
         Now the leftmost element of unsorted subarray becomes a part (rightmost)
         of sorted subarray and will not be a part of unsorted subarray.
       </li>
       <div className="text-3xl py-5 text-yellow-100">
-        A selection sort works as follows :{" "}
+        A selection sort works as follows :
       </div>
       <img src={one} />
       This is our initial array A = [5, 2, 6, 7, 2, 1, 0, 3]

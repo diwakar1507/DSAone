@@ -44,7 +44,6 @@ const Quick = () => {
           time or locations, sorting files by name or date of creation etc.
         </li>
         <li>
-          {" "}
           Numerical computations: Most of the efficiently developed algorithms
           use priority queues and inturn sorting to achieve accuracy in all the
           calculations.
@@ -126,12 +125,10 @@ const Quick = () => {
           change and move on to the next element 23.
         </li>
         <li>
-          {" "}
           Compare again with the pivot. Since 23 is less than 32, we swap 50 and
           23. The array becomes 23, 50, 9, 18, 61, 32
         </li>
         <li>
-          {" "}
           We move on to the next element 9 which is again less than pivot (32)
           thus swapping it with 50 makes our array as 23, 9, 50, 18, 61, 32.
         </li>
@@ -141,7 +138,6 @@ const Quick = () => {
           hence no changes.
         </li>
         <li>
-          {" "}
           Lastly, we swap our pivot with 50 so that it comes to the correct
           position.
         </li>
@@ -198,7 +194,7 @@ const Quick = () => {
         </li>
       </div>
       <div className="text-2xl py-5 text-yellow-100">
-        Space Complexity of Quick sort{" "}
+        Space Complexity of Quick sort
       </div>
       The space complexity is calculated based on the space used in the
       recursion stack. The worst case space used will be O(n) . The average case
