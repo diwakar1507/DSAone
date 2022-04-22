@@ -27,7 +27,6 @@ import Linear from "./Courses/Sorting/Linear";
 import Binary from "./Courses/Sorting/Binary";
 import Bfs from "./Courses/Tree/Bfs";
 import Dfs from "./Courses/Tree/Dfs";
-import Level from "./Courses/Tree/Level";
 import Dijkstra from "./Courses/Greedy/Dijkstra";
 import Knapsack from "./Courses/Greedy/Knapsack";
 import Job from "./Courses/Greedy/Job";
@@ -100,12 +99,6 @@ let Tree = [
     index: 2,
     img: dfs,
     page: Dfs,
-  },
-  {
-    name: "Level Order",
-    index: 3,
-    img: level,
-    page: Level,
   },
 ];
 let Greedy = [

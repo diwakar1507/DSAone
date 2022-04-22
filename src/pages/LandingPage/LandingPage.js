@@ -7,6 +7,7 @@ import Moon from "../../img/Landing Page/Section 1/Moon.svg";
 import illustration1 from "../../img/Landing Page/Section 2/Illustration.svg";
 import illustration2 from "../../img/Landing Page/Section 3/Illustration.svg";
 import illustration3 from "../../img/Landing Page/Section 4/Illustration.svg";
+import dsaonelogo from "../../img/dsaonelogo.svg"
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import BackToTop from "../../img/Landing Page/BackToTop.svg";
 import Github from "../../img/Landing Page/Github.svg";
@@ -382,59 +383,7 @@ const LandingPage = () => {
         <div className="flex w-full">
           <div className="basis-4/5 flex self-center p-2">
             <div className="pl-12 pr-16">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="30"
-                height="19"
-                viewBox="0 0 32 19">
-                <g transform="translate(-96 -50)">
-                  <g
-                    transform="translate(96 50)"
-                    fill="#d1d1d1"
-                    stroke="#d1d1d1"
-                    strokeWidth="1">
-                    <rect width="14" height="3" rx="1.5" stroke="none" />
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="13"
-                      height="2"
-                      rx="1"
-                      fill="none"
-                    />
-                  </g>
-                  <g
-                    transform="translate(96 58)"
-                    fill="#d1d1d1"
-                    stroke="#d1d1d1"
-                    strokeWidth="1">
-                    <rect width="32" height="3" rx="1.5" stroke="none" />
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="31"
-                      height="2"
-                      rx="1"
-                      fill="none"
-                    />
-                  </g>
-                  <g
-                    transform="translate(114 66)"
-                    fill="#d1d1d1"
-                    stroke="#d1d1d1"
-                    strokeWidth="1">
-                    <rect width="14" height="3" rx="1.5" stroke="none" />
-                    <rect
-                      x="0.5"
-                      y="0.5"
-                      width="13"
-                      height="2"
-                      rx="1"
-                      fill="none"
-                    />
-                  </g>
-                </g>
-              </svg>
+            <img className="h-10 w-10" src={dsaonelogo} alt="Main Logo" />
             </div>
             <div className="flex justify-around">
               <div className="text-orange-300 text-xl pr-12">
