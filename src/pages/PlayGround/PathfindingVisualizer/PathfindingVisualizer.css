@@ -1,0 +1,27 @@
+/* Grid styles */
+.Grid {
+  display: grid;
+  grid-template-columns: 100vw;
+  padding-bottom: 15px;
+}
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
