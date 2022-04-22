@@ -15,7 +15,6 @@ import AContent from "./pages/AlgorithmPage/AContent";
 
 function App() {
   return (
-    // <SmoothScroll>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -33,7 +32,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    // </SmoothScroll>
   );
 }
 

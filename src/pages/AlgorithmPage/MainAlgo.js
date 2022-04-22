@@ -1,18 +1,19 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
+import { GoBack } from "../../Components/GoBackCheck";
+
 const MainAlgo = () => {
   return (
     <div className="bg-primary-1 w-screen relative">
       <div className="fixed top-0 w-screen z-30">
-        <div className="backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
-          <div className="flex p-8 text-plain-white">
-            <Link to={`/`} className="flex-1 text-3xl">
-              DSAone
-            </Link>
-            <div className="text-5xl">Algorithms</div>
-            
-            <div className="flex-1"></div>
+        <div className="flex items-center justify-center backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
+          <div className="basis-1/12">
+            <GoBack url="/Algorithm" />
           </div>
+          <div className="basis-10/12 text-center text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
+            Algorithms
+          </div>
+          <div className="basis-1/12"></div>
         </div>
       </div>
       <Outlet />
