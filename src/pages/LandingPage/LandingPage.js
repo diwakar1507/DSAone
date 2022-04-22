@@ -437,18 +437,18 @@ const LandingPage = () => {
               </svg>
             </div>
             <div className="flex justify-around">
-              <div className="text-orange-300 text-xl pr-6">
+              <div className="text-orange-300 text-xl pr-12">
                 <SLink to="data" smooth={true} duration={700}>
                   <div>DataStructures</div>
                 </SLink>
               </div>
-              <div className="text-orange-300 text-xl pr-6">
-                <SLink to="algorithm" smooth={true} duration={1400}>
+              <div className="text-orange-300 text-xl pr-12">
+                <SLink to="algorithm" smooth={true} duration={800}>
                   <div>Algorithm</div>
                 </SLink>
               </div>
               <div className="text-orange-300 text-xl">
-                <SLink to="about" smooth={true} duration={2100}>
+                <SLink to="about" smooth={true} duration={900}>
                   <div>Playground</div>
                 </SLink>
               </div>

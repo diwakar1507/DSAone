@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getVisualizer } from "./Data";
-
 const GoPlay = () => {
   useEffect(() => {
     window.scrollTo(0, 0);

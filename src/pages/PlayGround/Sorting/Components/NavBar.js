@@ -6,6 +6,7 @@ import { sortingAlgorithms } from "../Common/config";
 import { useData } from "../Common/store";
 import shallow from "zustand/shallow";
 import { theme } from "../../Common/MUI_Theme";
+import { GoBack } from "../../../../Components/GoBack";
 
 const NavBar = () => {
   const [algorithm, setAlgorithm] = useData(
@@ -16,9 +17,11 @@ const NavBar = () => {
   return (
     <div className="w-full">
       <div className="flex items-center justify-center backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
-        <div className="text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
+        <div className="basis-1/12"><GoBack url="/PlayGround" /></div>
+        <div className="basis-10/12 text-center text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
           Sorting Algos
         </div>
+        <div className="basis-1/12"></div>
       </div>
       <ThemeProvider theme={theme}>
         <AppBar

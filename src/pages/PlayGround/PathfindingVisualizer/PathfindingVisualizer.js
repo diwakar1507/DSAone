@@ -15,6 +15,8 @@ import Node from "./Node/Node";
 // Import header and footer components
 import Header from "./Header/header";
 import { Link } from "react-router-dom";
+import { GoBack } from "../../../Components/GoBack";
+
 // Define Grid constants
 const rowLen = 29;
 const colLen = 59;
@@ -37,25 +39,24 @@ const BFS = "BFS";
 const ASTAR = "A* Search";
 
 const PathfindingVisualizer = (props) => {
-  const [Grid, setGrid] = useState([]);// 2-D Grid representing graph
+  const [Grid, setGrid] = useState([]); // 2-D Grid representing graph
   const [mouseIsPressed, setMouseIsPressed] = useState(false); // Boolean to indicate mouse press
-  const [isButtonDisabled, setIsButtonDisabled] = useState(false) // Boolean to toggle whether buttons are disabled
-  const [isMouseDisabled, setIsMouseDisabled] = useState(false) // Boolean to toggle whether mouse is disabled
-  const [moveStart, setMoveStart] = useState(false) // Boolean to indicate moving start node
-  const [moveFinish, setMoveFinish] = useState(false)  // Boolean to indicate moving end node
-  const [finishAnimations, setFinishAnimations] = useState(false)  // Boolean to indicate visualizations have completed
-  const [algorithm, setAlgorithm] = useState("") // Name of the currently selected algorithm
-  const [visualizeBtnText, setVisualizeBtnText] = useState("Visualize") // Used to change the name of the visualization button to selected algorithm
-  const [isInstantAnims, setIsInstantAnims] = useState(false)  // Boolean to indicate instant animations (When adding walls and moving end/start node after visualizations are complete)
-  const [animationDelay, setAnimationDelay] = useState(ANIMATION_AVG) // Animation delay between css visualization animations
-
+  const [isButtonDisabled, setIsButtonDisabled] = useState(false); // Boolean to toggle whether buttons are disabled
+  const [isMouseDisabled, setIsMouseDisabled] = useState(false); // Boolean to toggle whether mouse is disabled
+  const [moveStart, setMoveStart] = useState(false); // Boolean to indicate moving start node
+  const [moveFinish, setMoveFinish] = useState(false); // Boolean to indicate moving end node
+  const [finishAnimations, setFinishAnimations] = useState(false); // Boolean to indicate visualizations have completed
+  const [algorithm, setAlgorithm] = useState(""); // Name of the currently selected algorithm
+  const [visualizeBtnText, setVisualizeBtnText] = useState("Visualize"); // Used to change the name of the visualization button to selected algorithm
+  const [isInstantAnims, setIsInstantAnims] = useState(false); // Boolean to indicate instant animations (When adding walls and moving end/start node after visualizations are complete)
+  const [animationDelay, setAnimationDelay] = useState(ANIMATION_AVG); // Animation delay between css visualization animations
 
   // Create Grid upon mounting
   useEffect(() => {
     // Create initial Grid and set to state
     const Grid = createGrid();
     setGrid(Grid);
-  }, [])
+  }, []);
   // Handles mouse click on node
   const handleMouseDown = (e, row, col, isStart, isFinish) => {
     if (isMouseDisabled) return;
@@ -74,7 +75,7 @@ const PathfindingVisualizer = (props) => {
       setGrid(newGrid);
     }
     setMouseIsPressed(true);
-  }
+  };
   // Handles mouse hold on node
   const handleMouseEnter = (row, col) => {
     if (!mouseIsPressed) return;
@@ -97,7 +98,7 @@ const PathfindingVisualizer = (props) => {
       }
     }
     setGrid(newGrid);
-  }
+  };
   const createGrid = () => {
     const Grid = [];
     for (let row = 0; row < rowLen; row++) {
@@ -139,8 +140,7 @@ const PathfindingVisualizer = (props) => {
     setMouseIsPressed(false);
     setMoveStart(false);
     setMoveFinish(false);
-
-  }
+  };
   // Reset Grid (Includes walls, Node [all] classes and properties)
   const clearBoard = () => {
     // Select Grid element
@@ -166,8 +166,7 @@ const PathfindingVisualizer = (props) => {
     setGrid(newGrid);
     setFinishAnimations(false);
     setIsInstantAnims(false);
-
-  }
+  };
   // Reset Grid (Includes Node [all] classes and properties)
   const clearNodeClasses = () => {
     // Select Grid element
@@ -198,7 +197,7 @@ const PathfindingVisualizer = (props) => {
       }
     }
     setGrid(newGrid);
-  }
+  };
   // Reset Grid (Includes Node [animation] classes and properties)
   const clearAnimations = (newGrid) => {
     const gridElem = document.getElementsByClassName("Grid")[0];
@@ -228,7 +227,7 @@ const PathfindingVisualizer = (props) => {
         }
       }
     }
-  }
+  };
   // Dijkstra's algorithm (With animations)
   const dijkstraAnimations = () => {
     // Disable mouse and buttons
@@ -275,7 +274,7 @@ const PathfindingVisualizer = (props) => {
     }, (visitedOrder.length + nodesInShortestPathOrder.length + 1) * animationDelay);
     // Set new Grid
     setGrid(newGrid);
-  }
+  };
   // Dijkstra's algorithm (No animations)
   const dijkstraNoAnim = (newGrid) => {
     clearAnimations(newGrid);
@@ -286,7 +285,7 @@ const PathfindingVisualizer = (props) => {
     dijkstra.dijkstraAlgorithm(newGrid, animations, startNode, endNode);
     setIsInstantAnims(true);
     return newGrid;
-  }
+  };
   // DFS Algorithm (With animations)
   const dfsAnimations = () => {
     // Disable mouse and buttons
@@ -333,10 +332,11 @@ const PathfindingVisualizer = (props) => {
     }
     // Reenable mouse and buttons after animations are finished
     setTimeout(() => {
-      setIsButtonDisabled(false); setIsMouseDisabled(false);
+      setIsButtonDisabled(false);
+      setIsMouseDisabled(false);
     }, (visitedOrder.length + pathLength + 1) * animationDelay);
     setGrid(newGrid);
-  }
+  };
   // DFS Algorithm (No animations)
   const dfsNoAnim = (newGrid) => {
     clearAnimations(newGrid);
@@ -356,7 +356,7 @@ const PathfindingVisualizer = (props) => {
     }
     setIsInstantAnims(true);
     return newGrid;
-  }
+  };
   // BFS Algorithm (With animations)
   const bfsAnimations = () => {
     // Disable mouse and buttons
@@ -398,10 +398,11 @@ const PathfindingVisualizer = (props) => {
     }
     // Reenable mouse and buttons after animations are finished
     setTimeout(() => {
-      setIsButtonDisabled(false); setIsMouseDisabled(false);
+      setIsButtonDisabled(false);
+      setIsMouseDisabled(false);
     }, (visitedOrder.length + nodesInShortestPathOrder.length + 1) * animationDelay);
     setGrid(newGrid);
-  }
+  };
   // DFS Algorithm (No animations)
   const bfsNoAnim = (newGrid) => {
     clearAnimations(newGrid);
@@ -412,7 +413,7 @@ const PathfindingVisualizer = (props) => {
     bfs.bfsAlgorithm(newGrid, animations, startNode, endNode);
     setIsInstantAnims(true);
     return newGrid;
-  }
+  };
   // A* Algorthim (With animations)
   const aStarAnimations = () => {
     // Disable mouse and buttons
@@ -453,11 +454,12 @@ const PathfindingVisualizer = (props) => {
     }
     // Reenable mouse and buttons after animations are finished
     setTimeout(() => {
-      setIsButtonDisabled(false); setIsMouseDisabled(false);
+      setIsButtonDisabled(false);
+      setIsMouseDisabled(false);
     }, (visitedOrder.length + nodesInShortestPathOrder.length + 1) * animationDelay);
     // Set new Grid
     setGrid(newGrid);
-  }
+  };
   // A* Algorithm (No animations)
   const aStarNoAnim = (newGrid) => {
     clearAnimations(newGrid);
@@ -468,7 +470,7 @@ const PathfindingVisualizer = (props) => {
     astar.aStarAlgorithm(newGrid, animations, startNode, endNode);
     setIsInstantAnims(true);
     return newGrid;
-  }
+  };
   // Recursive Division Algorithm (Wall algorithm)
   const recursiveDivisionAnimation = (mode) => {
     // Disable mouse and buttons
@@ -505,12 +507,13 @@ const PathfindingVisualizer = (props) => {
     console.log(newGrid[0][1]);
     // Reenable mouse and buttons after animations are finished
     setTimeout(() => {
-      setIsButtonDisabled(false); setIsMouseDisabled(false);
+      setIsButtonDisabled(false);
+      setIsMouseDisabled(false);
       clearNodeClasses();
     }, wallVisitedOrder.length * animationDelay + 500);
     setGrid(newGrid);
     return;
-  }
+  };
   // Toggles starting node prop of node hovered by mouse
   const toggleStart = (Grid, row, col) => {
     if (Grid[row][col].isFinish || Grid[row][col].isWall) return Grid;
@@ -520,7 +523,7 @@ const PathfindingVisualizer = (props) => {
     startCol = col;
     startRow = row;
     return newGrid;
-  }
+  };
   // Toggles finish node prop of node hovered by mouse
   const toggleFinish = (Grid, row, col) => {
     if (Grid[row][col].isStart || Grid[row][col].isWall) return Grid;
@@ -556,7 +559,7 @@ const PathfindingVisualizer = (props) => {
       default:
         break;
     }
-  }
+  };
   // Handles visualization with wall addition and start/end node moving (No animations)
   const visualizeNoAnim = (algorithm, newGrid) => {
     switch (algorithm) {
@@ -571,7 +574,7 @@ const PathfindingVisualizer = (props) => {
       default:
         break;
     }
-  }
+  };
   // Handles cycling animation delay button click
   const cycleSpeed = () => {
     if (animationDelay === ANIMATION_FAST) {
@@ -583,12 +586,11 @@ const PathfindingVisualizer = (props) => {
     } else if (animationDelay === ANIMATION_SLOW) {
       setAnimationDelay(ANIMATION_SLOWEST);
       speed = " MIN";
-    }
-    else if (animationDelay === ANIMATION_INSTANT) {
+    } else if (animationDelay === ANIMATION_INSTANT) {
       setAnimationDelay(ANIMATION_FAST);
       speed = 40;
     }
-  }
+  };
   const IcycleSpeed = () => {
     if (animationDelay === ANIMATION_SLOW) {
       setAnimationDelay(ANIMATION_AVG);
@@ -596,33 +598,29 @@ const PathfindingVisualizer = (props) => {
     } else if (animationDelay === ANIMATION_SLOWEST) {
       setAnimationDelay(ANIMATION_SLOW);
       speed = 20;
-    }
-
-    else if (animationDelay === ANIMATION_FAST) {
+    } else if (animationDelay === ANIMATION_FAST) {
       setAnimationDelay(ANIMATION_INSTANT);
       speed = " MAX";
-    }
-    else if (animationDelay === ANIMATION_AVG) {
+    } else if (animationDelay === ANIMATION_AVG) {
       setAnimationDelay(ANIMATION_FAST);
       speed = 40;
     }
-  }
+  };
 
   return (
     <div className="bg-primary-1">
-      <div className="flex text-primary-3 bg-primary-2">
-        <Link to="/"><p className="text-4xl py-5 pr-44 pl-5">DSAone</p></Link>
-        <p className="text-5xl py-5 pl-40 ">PathFinding Visualizer</p>
-
+      <div className="flex items-center justify-center backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
+        <div className="basis-1/12">
+          <GoBack url="/PlayGround" />
+        </div>
+        <div className="basis-10/12 text-center text-5xl bg-clip-text text-transparent bg-gradient-to-b from-primary-3 to-orange-400 p-8">
+        PathFinding Visualizer
+        </div>
+        <div className="basis-1/12"></div>
       </div>
-
-
       <Header />
-
-
       <div className=" bg-primary-1 relative">
         <div className=" text-xl text-white mb-4 py-5 backdrop-filter shadow-bar backdrop-blur-md backdrop-brightness-125 shadow-2xl">
-
           <div className=" px-10 flex justify-between">
             <div className="dropdown p-1 text-2xl hover:border-b-2 hover:text-yellow-100  cursor-pointer hover: border-b-primary-3">
               <p>Maze</p>
@@ -632,8 +630,7 @@ const PathfindingVisualizer = (props) => {
                   onClick={() => {
                     recursiveDivisionAnimation("deterministic");
                   }}
-                  disabled={isButtonDisabled}
-                >
+                  disabled={isButtonDisabled}>
                   Recursive Divison
                 </button>
                 <button
@@ -641,8 +638,7 @@ const PathfindingVisualizer = (props) => {
                   onClick={() => {
                     recursiveDivisionAnimation("horizontal");
                   }}
-                  disabled={isButtonDisabled}
-                >
+                  disabled={isButtonDisabled}>
                   Horizontal-skew
                 </button>
                 <button
@@ -650,24 +646,21 @@ const PathfindingVisualizer = (props) => {
                   onClick={() => {
                     recursiveDivisionAnimation("vertical");
                   }}
-                  disabled={isButtonDisabled}
-                >
+                  disabled={isButtonDisabled}>
                   Vertical-skew
                 </button>
               </div>
             </div>
-
             <button
               className=" hover:border-b-2 hover: border-b-primary-3 hover:text-yellow-100  p-1 "
               onClick={() => {
                 clearNodeClasses();
                 setAlgorithm(DIJKSTRAS);
-                setVisualizeBtnText("Visualize " + DIJKSTRAS,);
+                setVisualizeBtnText("Visualize " + DIJKSTRAS);
                 setFinishAnimations(false);
                 setIsInstantAnims(false);
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               Dijkstra's
             </button>
             <button
@@ -679,8 +672,7 @@ const PathfindingVisualizer = (props) => {
                 setFinishAnimations(false);
                 setIsInstantAnims(false);
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               A*(Euclidean)
             </button>
             <button
@@ -692,8 +684,7 @@ const PathfindingVisualizer = (props) => {
                 setFinishAnimations(false);
                 setIsInstantAnims(false);
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               DFS
             </button>
             <button
@@ -705,8 +696,7 @@ const PathfindingVisualizer = (props) => {
                 setFinishAnimations(false);
                 setIsInstantAnims(false);
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               BFS
             </button>
             <button
@@ -718,15 +708,13 @@ const PathfindingVisualizer = (props) => {
                   setVisualizeBtnText("Select an Algorithm");
                 }
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               {visualizeBtnText}
             </button>
             <button
               className=" bg-primary-3 px-3 rounded-xl  hover:bg-orange-600 text-xl p-1 border-b-2"
               onClick={() => clearBoard()}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               Clear Board
             </button>
             <button
@@ -736,27 +724,30 @@ const PathfindingVisualizer = (props) => {
                 setFinishAnimations(false);
                 setIsInstantAnims(false);
               }}
-              disabled={isButtonDisabled}
-            >
+              disabled={isButtonDisabled}>
               Reset Animations
             </button>
             <div className="flex">
-              <img className="h-10 w-10 cursor-pointer" src={plus} onClick={() => IcycleSpeed()} />
+              <img
+                className="h-10 w-10 cursor-pointer"
+                src={plus}
+                onClick={() => IcycleSpeed()}
+              />
 
               <button
                 className="{speedBtnClass} bg-transparent px-3 rounded-xl text-yellow-300  hover:text-white text-xl p-1 border-b-2"
                 onClick={() => cycleSpeed()}
-                disabled={isButtonDisabled}
-              >
+                disabled={isButtonDisabled}>
                 Speed:{speed}
               </button>
-              <img className="h-10 w-10 cursor-pointer" src={minus} onClick={() => cycleSpeed()} />
+              <img
+                className="h-10 w-10 cursor-pointer"
+                src={minus}
+                onClick={() => cycleSpeed()}
+              />
             </div>
-
-
           </div>
         </div>
-
       </div>
       <div className="Grid">
         {Grid.map((row, rowIdx) => {
@@ -790,8 +781,7 @@ const PathfindingVisualizer = (props) => {
                       handleMouseDown(e, row, col, isStart, isFinish)
                     }
                     onMouseEnter={() => handleMouseEnter(row, col)}
-                    onMouseUp={handleMouseUp}
-                  ></Node>
+                    onMouseUp={handleMouseUp}></Node>
                 );
               })}
             </div>
@@ -801,8 +791,6 @@ const PathfindingVisualizer = (props) => {
     </div>
   );
 
-
   // Creates initial Grid filled with nodes
-
-}
+};
 export default PathfindingVisualizer;
