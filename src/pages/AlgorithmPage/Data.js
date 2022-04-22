@@ -8,7 +8,6 @@ import sort1 from "../../img/Algo/sort1.svg";
 import sort2 from "../../img/Algo/sort2.svg";
 import dfs from "../../img/Algo/dfs.svg";
 import bfs from "../../img/Algo/bfs.svg";
-import level from "../../img/Algo/level.svg";
 import knapsack from "../../img/Algo/knapsack.svg";
 import dijkstra from "../../img/Algo/dijkstra.svg";
 import job from "../../img/Algo/job.svg";
