@@ -10,10 +10,14 @@ import {
 import { useControls } from "../../Common/store";
 
 let swapTime = useControls.getState().swapTime;
-useControls.subscribe(
-  (time) => (swapTime = time),
-  (state) => state.swapTime
-);
+// useControls.subscribe(
+//   (time) => (swapTime = time),
+//   (state) => state.swapTime
+// );
+useControls.subscribe((state) => {
+  if (swapTime !== state.swapTime)
+    swapTime = state.swapTime;
+});
 
 const AnimatedItem = styled(ArrayItem)`
   animation: ${(props) => swapAnimation(props.distance, swapColor)}

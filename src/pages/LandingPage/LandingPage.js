@@ -371,18 +371,17 @@ const LandingPage = () => {
     <div className="text-l relative z-20 overflow-hidden text-gray82" id="top">
       <SLink to="top" smooth={true} duration={700}>
         {visible && (
-          <span className="text-xl bottom-5 fixed z-10 animate-bounce text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-24 ml-2">
-            <img src={BackToTop} />
+          <span className="text-xl bottom-5 fixed z-10 animate-bounce text-center opacity-1 left-0 bg-grey-900 cursor-pointer w-16 ml-2">
+            <img src={BackToTop} alt="hover logo" />
           </span>
         )}
       </SLink>
-
       <div
         className="w-full h-8 pt-6 absolute mix-blend-screen z-50 cursor-pointer select-none"
         ref={topbarRef}>
-        <div className="flex">
-          <div className="basis-1/2 flex">
-            <div className="pl-24 basis-1/4">
+        <div className="flex w-full">
+          <div className="basis-4/5 flex self-center p-2">
+            <div className="pl-12 pr-16">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -437,23 +436,29 @@ const LandingPage = () => {
                 </g>
               </svg>
             </div>
-            <div className="flex text-orange-300 text-xl pl-28 justify-around basis-3/4">
-              <SLink to="data" smooth={true} duration={700}>
-                <div>DataStructures</div>
-              </SLink>
-              <SLink to="algorithm" smooth={true} duration={1400}>
-                <div>Algorithm</div>
-              </SLink>
-              <SLink to="about" smooth={true} duration={2100}>
-                <div>Playground</div>
-              </SLink>
+            <div className="flex justify-around">
+              <div className="text-orange-300 text-xl pr-6">
+                <SLink to="data" smooth={true} duration={700}>
+                  <div>DataStructures</div>
+                </SLink>
+              </div>
+              <div className="text-orange-300 text-xl pr-6">
+                <SLink to="algorithm" smooth={true} duration={1400}>
+                  <div>Algorithm</div>
+                </SLink>
+              </div>
+              <div className="text-orange-300 text-xl">
+                <SLink to="about" smooth={true} duration={2100}>
+                  <div>Playground</div>
+                </SLink>
+              </div>
             </div>
           </div>
-          <a
-            href="https://github.com/Ishan-Shukla/DSAone/tree/build"
-            target="_blank">
-            <img className="h-12 w-12 ml-28" src={Github}></img>
-          </a>
+          <div className="basis-1/5 flex self-center">
+            <a href="https://github.com/Ishan-Shukla/DSAone/tree/build">
+              <img className="h-10 w-10" src={Github} alt="github Logo" />
+            </a>
+          </div>
         </div>
       </div>
       <div className="bg-horizon h-screen w-screen relative" id="main">

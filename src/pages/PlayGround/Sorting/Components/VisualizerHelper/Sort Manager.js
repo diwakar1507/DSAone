@@ -7,8 +7,8 @@ import shallow from "zustand/shallow";
 import { Timer } from "./Timer";
 import { Info } from "./Info";
 
-let compareTime = useControls.getState().compareTime;
-let swapTime = useControls.getState().swapTime;
+// let compareTime = useControls.getState().compareTime;
+// let swapTime = useControls.getState().swapTime;
 
 // useControls.subscribe(
 //   ([cTime, sTime]) => {
@@ -38,6 +38,8 @@ export const SortManager = React.memo(function ({
   const markSortngDone = useControls((state) => state.markSortngDone);
   const progress = useRef("");
   const sortProgressIterator = useRef(null);
+  const compareTime = useRef(useControls.getState().compareTime);
+  const swapTime = useRef(useControls.getState().swapTime);
 
   async function reset() {
     algoArray.current = [...useData.getState().sortingArray];
@@ -57,16 +59,29 @@ export const SortManager = React.memo(function ({
 
   useEffect(() => {
     progress.current = useControls.getState().progress;
-    useControls.subscribe(
-      (value) => {
-        progress.current = value;
+    // useControls.subscribe(
+    //   (value) => {
+    //     progress.current = value;
         
+    //     if (progress.current === "start") runAlgo();
+    //     if (progress.current === "reset") reset();
+    //   },
+    //   (state) => state.progress,
+    // );
+    useControls.subscribe(
+      (state) => {
+        progress.current = state.progress;
         if (progress.current === "start") runAlgo();
         if (progress.current === "reset") reset();
       },
-      (state) => state.progress,
+      (state) => state.progress
     );
-
+    useControls.subscribe((state) => {
+      if (compareTime !== state.compareTime)
+        compareTime.current = state.compareTime;
+      if (swapTime !== state.swapTime)
+        swapTime.current = state.swapTime;
+    });
     return () => {
       isComponentUnMounted.current = true;
     };
@@ -107,7 +122,7 @@ export const SortManager = React.memo(function ({
     
     pivot.current = -1;
     swapCount.current += 1;
-    await delay(swapTime);
+    await delay(swapTime.current);
   }
 
   async function combine(source, destination) {
@@ -115,7 +130,7 @@ export const SortManager = React.memo(function ({
       swapCount.current += 1;
       setHightlightedIndices([-1, -1]);
       setSwapIndices([source, destination]);
-      await delay(swapTime);
+      await delay(swapTime.current);
     }
   }
 
@@ -124,7 +139,7 @@ export const SortManager = React.memo(function ({
     comparisionCount.current += 1;
     pivot.current = p;
     setHightlightedIndices(indices);
-    await delay(compareTime);
+    await delay(compareTime.current);
   }
 
   function markSort(...indices) {
