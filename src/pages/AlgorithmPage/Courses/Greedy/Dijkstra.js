@@ -2,7 +2,7 @@ const Dijkstra = () => {
   return (
     <div className="text-xl py-10 px-14 bg-primary-1 text-white">
       <div className="text-8xl text-center text-yellow-200 py-8">
-        Breadth First Search
+        Dijkstra's Algorithm
       </div>
       Dijkstra algorithm is a single-source shortest path algorithm. Here,
       single-source means that only one source is given, and we have to find the

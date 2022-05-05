@@ -60,11 +60,11 @@ const HeapDs = () => {
     gsap.fromTo(
       headingRef.current,
       {
-        y: 220,
-        x: 450,
+        y: 250,
+        x: 600,
       },
       {
-        y: 10,
+        y: 40,
         x: 90,
         fontSize: 80,
         delay: 0.8,

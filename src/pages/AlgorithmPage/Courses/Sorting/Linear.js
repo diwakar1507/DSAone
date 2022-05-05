@@ -1,3 +1,4 @@
+import two from "../../../../img/Algo/Binary/two.png";
 const Linear = () => {
   return (
     <div className="text-xl py-10 px-14 bg-primary-1 text-white">
@@ -21,7 +22,8 @@ const Linear = () => {
         If the target is found to be equal to the element, return its index
       </li>
       <li>If the target is not found, return -1</li>
-      <div className="text-2xl py-5 text-yellow-100">Code Implementation</div>
+      <div className="text-2xl py-5 text-yellow-100">Illustration</div>
+      <img className="ml-16 my-10"src={two}/>
       <div className="text-2xl py-5 text-yellow-100">
         Time Complexity Analysis
       </div>

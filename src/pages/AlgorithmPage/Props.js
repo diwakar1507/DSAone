@@ -31,6 +31,47 @@ let Props = [
     index: 8,
     img: "-translate-y-16 scale-90",
   },
+  {
+    index: 9,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 10,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 11,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 12,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 13,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 14,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 15,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 16,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 17,
+    img: "-translate-y-16 scale-90",
+  },
+  {
+    index: 18,
+    img: "-translate-y-16 scale-90",
+  },
+  
 ];
 
 export function getStyle(number) {

@@ -1,7 +1,7 @@
 const Kruskals = () => {
   return (
-    <div className="text-xl py-10 px-14 bg-primary-1 text-white">
-      <strong>What is Minimum Spanning Tree?</strong>
+    <div className="text-xl py-10 px-14 mt-24 bg-primary-1 text-white">
+      <strong className="text-yellow-200 ">What is Minimum Spanning Tree?</strong>
       <br />
       <br />
       Given a connected and undirected graph, a spanning tree of that graph is a

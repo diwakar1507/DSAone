@@ -21,7 +21,7 @@ const Heap = () => {
       <li>
         Repeat the step 2, until all the elements are in their correct position.
       </li>
-      <div className="text-3xl py-5 text-yellow-100">Implementation:</div>
+      
       <div className="text-3xl py-5 text-yellow-100">Complexity</div>
       max_heapify has complexity O(logN) , build_maxheap has complexity O(N) and
       we run max_heapify N-1 times in heap_sort function, therefore complexity
@@ -29,10 +29,10 @@ const Heap = () => {
       <div className="text-3xl py-5 text-yellow-100">Example:</div>
       In the diagram below,initially there is an unsorted array Arr having 6
       elements and then max-heap will be built.
-      <img src={one} />
+      <img className="h-96 m-10" src={one} />
       After building max-heap, the elements in the array will be:
-      <img src={two} />
-      enter image description here
+      <img className="h-16 m-10"src={two} />
+    
       <br />
       <li>Step 1: 8 is swapped with 5.</li>
       <li>
@@ -46,9 +46,9 @@ const Heap = () => {
       <li>Step 8: 4 is disconnected from heap.</li>
       <li>Step 9: Max heap is created and 3 is swapped with 1.</li>
       <li>Step 10: 3 is disconnected.</li>
-      <img src={three} />
+      <img className="h-screen w-1/2 m-10"src={three} />
       After all the steps, we will get a sorted array.
-      <img src={four} />
+      <img className="h-16 m-10"src={four} />
     </div>
   );
 };

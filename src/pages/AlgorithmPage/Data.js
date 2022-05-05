@@ -84,96 +84,75 @@ let Courses = [
     img: Lsearch,
     page: Linear,
   },
-];
-
-let Tree = [
   {
     name: "BFS",
-    index: 1,
+    index: 9,
     img: bfs,
     page: Bfs,
   },
   {
     name: "DFS",
-    index: 2,
+    index: 10,
     img: dfs,
     page: Dfs,
   },
-];
-let Greedy = [
   {
     name: "Knapsack",
-    index: 1,
+    index: 11,
     img: knapsack,
     page: Knapsack,
   },
   {
     name: "Dijkstra",
-    index: 2,
+    index: 12,
     img: dijkstra,
     page: Dijkstra,
   },
   {
     name: "Job sequencing",
-    index: 3,
+    index: 13,
     img: job,
     page: Job,
   },
   {
     name: "Prims",
-    index: 4,
+    index: 14,
     img: pm,
     page: Prims,
   },
   {
     name: "Kruskals",
-    index: 5,
+    index: 15,
     img: pm1,
     page: Kruskals,
   },
-];
-let Dynamic = [
   {
     name: "Floyd Warshall",
-    index: 1,
+    index: 16,
     img: floyd,
     page: FW,
   },
   {
     name: "Bellman Ford",
-    index: 2,
+    index: 17,
     img: bellman,
     page: BF,
   },
   {
     name: "0/1 Knapsack",
-    index: 3,
+    index: 18,
     img: knapsack1,
     page: Knapsack1,
   },
 ];
 
+
+
 export function getCourses() {
   return Courses;
 }
-export function getTree() {
-  return Tree;
-}
-export function getGreedy() {
-  return Greedy;
-}
-export function getDynamic() {
-  return Dynamic;
-}
+
 export function getCourse(number) {
   return Courses.find((course) => course.index === number).page;
 }
-export function getCourseT(number) {
-  return Tree.find((course) => course.index === number).page;
-}
-export function getCourseG(number) {
-  return Greedy.find((course) => course.index === number).page;
-}
-export function getCourseD(number) {
-  return Dynamic.find((course) => course.index === number).page;
-}
+

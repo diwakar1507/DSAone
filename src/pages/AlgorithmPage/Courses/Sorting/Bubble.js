@@ -77,28 +77,28 @@ const Bubble = () => {
       Initial array
       <br />
       <br />
-      <img src={one} />
+      <img className="h-32 m-5 "src={one} />
       First Pass:
       <br />
       <br />
       We proceed with the first and second element i.e., Arr[0] and Arr[1].
       Check if 14 {">"} 33 which is false. So, no swapping happens and the array
       remains the same.
-      <img src={one} />
+      <img className="h-32 m-5 " src={one} />
       We proceed with the second and third element i.e., Arr[1] and Arr[2].
       Check if 33 {">"} 27 which is true. So, we swap Arr[1] and Arr[2].
-      <img src={two} />
+      <img className="h-44 m-5 " src={two} />
       Thus the array becomes:
-      <img src={three} />
+      <img className="h-32 m-5 " src={three} />
       We proceed with the third and fourth element i.e., Arr[2] and Arr[3].
       Check if 33 {">"} 35 which is false. So, no swapping happens and the array
       remains the same.
-      <img src={three} />
+      <img className="h-32 m-5 " src={three} />
       We proceed with the fourth and fifth element i.e., Arr[3] and Arr[4].
       Check if 35 {">"} 10 which is true. So, we swap Arr[3] and Arr[4].
-      <img src={four} />
+      <img className="h-44 m-5 " src={four} />
       Thus, after swapping the array becomes:
-      <img src={five} />
+      <img className="h-32 m-5 " src={five} />
       Thus, marks the end of the first pass, where the Largest element reaches
       its final(last) position. Second Pass:
       <br />
@@ -106,7 +106,7 @@ const Bubble = () => {
       We proceed with the first and second element i.e., Arr[0] and Arr[1].
       Check if 14 {">"} 27 which is false. So, no swapping happens and the array
       remains the same.
-      <img src={five} />
+      <img className="h-32 m-5 " src={five} />
       We now proceed with the second and third element i.e., Arr[1] and Arr[2].
       Check if 27 {">"} 33 which is false. So, no swapping happens and the array
       remains the same.
@@ -114,9 +114,9 @@ const Bubble = () => {
       <br />
       We now proceed with the third and fourth element i.e., Arr[2] and Arr[3].
       Check if 33 {">"} 10 which is true. So, we swap Arr[2] and Arr[3].
-      <img src={six} />
+      <img className="h-44 m-5 " src={six} />
       Now, the array becomes
-      <img src={seven} />
+      <img className="h-32 m-5 " src={seven} />
       Thus marks the end of second pass where the second largest element in the
       array has occupied its correct position
       <br />
@@ -126,7 +126,7 @@ const Bubble = () => {
       <br />
       After the third pass, the third largest element will be at the third last
       position in the array.
-      <img src={eight} />
+      <img className="h-32 m-5 " src={eight} />
       enter image description here
       <br />
       <br />
@@ -149,7 +149,7 @@ const Bubble = () => {
       <br />
       <br />
       Thus, the sorted array will look like this.
-      <img src={nine} />
+      <img className="h-32 m-5 " src={nine} />
       <div className="text-3xl py-5 text-yellow-100">Complexity Analysist</div>
       <div className="text-2xl py-5 text-yellow-100">
         Time Complexity of Bubble sort

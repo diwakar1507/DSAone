@@ -1,3 +1,4 @@
+import one from "../../../../img/Algo/Binary/one.png";
 const Binary = () => {
   return (
     <div className="text-xl py-10 px-14 bg-primary-1 text-white">
@@ -36,7 +37,8 @@ const Binary = () => {
         If the target element is found, its index is returned, else -1 is
         returned.
       </li>
-      <div className="text-2xl py-5 text-yellow-100">Code Implementation</div>
+      <div className="text-2xl py-5 text-yellow-100">Illustration</div>
+      <img className="ml-16"src={one}/>
       <div className="text-2xl py-5 text-yellow-100">
         Time Complexity Analysis
       </div>

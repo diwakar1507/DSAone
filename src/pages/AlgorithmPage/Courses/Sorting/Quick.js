@@ -157,7 +157,7 @@ const Quick = () => {
       <br />
       The following diagram depicts the workflow of the Quick Sort algorithm
       which was described above.
-      <img src={one} />
+      <img className="h-screen m-10 ml-32"src={one} />
       <div className="text-3xl py-5 text-yellow-100">Complexity Analysist</div>
       <div className="text-2xl py-5 text-yellow-100">
         Time Complexity of Quick sort

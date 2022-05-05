@@ -2,7 +2,7 @@ const Knapsack1 = () => {
   return (
     <div className="text-xl py-10 px-14 bg-primary-1 text-white">
       <div className="text-8xl text-center text-yellow-200 py-8">
-        Bellman Ford's Algorithm
+        Knapsack 0/1
       </div>
       <div className="text-2xl py-5 text-yellow-100">Introduction</div>
       Given a Knapsack/Bag with W weight capacity and a list of N items with
@@ -40,7 +40,7 @@ const Knapsack1 = () => {
       subproblems thus we can make use of Dynamic programming to solve 0-1
       Knapsack problem.
       <br />
-      For Example :
+    
     </div>
   );
 };

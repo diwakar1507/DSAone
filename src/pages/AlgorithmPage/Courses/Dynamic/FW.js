@@ -2,7 +2,7 @@ const FW = () => {
   return (
     <div className="text-xl py-10 px-14 bg-primary-1 text-white">
       <div className="text-8xl text-center text-yellow-200 py-8">
-        Bellman Ford's Algorithm
+        Floyd-Warshall Algorithm
       </div>
       Floyd-Warshall Algorithm is an algorithm for finding the shortest path
       between all the pairs of vertices in a weighted graph. This algorithm

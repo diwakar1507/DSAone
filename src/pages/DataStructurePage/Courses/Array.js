@@ -31,7 +31,7 @@ const ArrayDS = () => {
     <div className="relative z-20">
       <div className="text-l text-gray82 pb-28">
         <div className="bg-primary-1 w-full relative">
-          <div className="p-12 pb-8 text-8xl" ref={HeadingRef}>
+          <div className="text-yellow-200 p-12 pb-8 mt-10 text-8xl" ref={HeadingRef}>
             Array
           </div>
           <div className="md:pl-16 md:pr-28 md:pb-10 p-5 " ref={containerRef}>

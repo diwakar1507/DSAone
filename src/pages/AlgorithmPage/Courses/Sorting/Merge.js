@@ -28,7 +28,7 @@ const Merge = () => {
         Divide the unsorted list into n sublists, each comprising 1 element (a
         list of 1 element is supposed sorted).
       </li>
-      <img src={one} />
+      <img className="h-screen m-10" src={one} />
       <li>
         Repeatedly merge sublists to produce newly sorted sublists until there
         is only 1 sublist remaining. This will be the sorted list.
@@ -41,7 +41,7 @@ const Merge = () => {
       list. This procedure is repeated until both the smaller sublists are empty
       and the newly combined sublist covers all the elements of both the
       sublists.
-      <img src={two} />
+      <img className="h-screen m-10" src={two} />
     </div>
   );
 };

@@ -25,7 +25,7 @@ const Insertion = () => {
         <li>Complexity Analysis</li>
       </div>
       <div className="text-3xl py-5 text-yellow-100">
-        Understand the working of Quick sort
+        Understand the working of Insertion sort
       </div>
       <div className="pl-5 text-slate-50">
         <li>
@@ -50,7 +50,7 @@ const Insertion = () => {
       Hence swap 17 and 25.
       <br />
       The array now looks like : 17, 25, 31, 13, 2
-      <img src={one} />
+      <img className="h-32 m-5 " src={one} />
       <br />
       Second Iteration: Begin with the second element (25), but it was already
       swapped on for the correct position, so we move ahead to the next element.
@@ -60,7 +60,7 @@ const Insertion = () => {
       swapping takes place and 31 remains at its position.
       <br />
       The array after the Second iteration looks like: 17, 25, 31, 13, 2
-      <img src={two} />
+      <img className="h-24 m-5 " src={two} />
       Third Iteration: Start the following Iteration with the fourth element
       (13), and compare it with its preceding elements. Since 13{"<"} 31, we
       swap the two.
@@ -77,7 +77,7 @@ const Insertion = () => {
       {"<"} 17, we swap the two.
       <br />
       The array now becomes 13, 17, 25, 31, 2.
-      <img src={three} />
+      <img className="h-24 m-5 " src={three} />
       Fourth Iteration: The last iteration calls for the comparison of the last
       element (2), with all the preceding elements and make the appropriate
       swapping between elements. Since, 2{"<"} 31. Swap 2 and 31.
@@ -99,7 +99,7 @@ const Insertion = () => {
       <br />
       This is the final array after all the corresponding iterations and
       swapping of elements.
-      <img src={four} />
+      <img className="h-24 m-5 " src={four} />
       <div className="text-3xl py-5 text-yellow-100">
         Time Complexity Analysis:
       </div>

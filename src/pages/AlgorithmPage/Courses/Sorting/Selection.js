@@ -29,53 +29,53 @@ const Selection = () => {
       <div className="text-3xl py-5 text-yellow-100">
         A selection sort works as follows :
       </div>
-      <img src={one} />
+      <img className="h-32 m-5 " src={one} />
       This is our initial array A = [5, 2, 6, 7, 2, 1, 0, 3]
-      <img src={two} />
+      <img className="h-32 m-5 " src={two} />
       Leftmost element of unsorted part = A[0]
       <br />
       Minimum element of unsorted part = A[6]
       <br />
       We will swap A[0] and A[6] then, make A[0] part of sorted subarray.
-      <img src={three} />
+      <img className="h-32 m-5 " src={three} />
       Leftmost element of unsorted part = A[1]
       <br />
       Minimum element of unsorted part = A[5]
       <br />
       We will swap A[1] and A[5] then, make A[1] part of sorted subarray.
-      <img src={four} />
+      <img className="h-32 m-5 " src={four} />
       Leftmost element of unsorted part = A[2]
       <br />
       Minimum element of unsorted part = A[4]
       <br />
       We will swap A[2] and A[4] then, make A[2] part of sorted subarray.
-      <img src={five} />
+      <img className="h-32 m-5 " src={five} />
       Leftmost element of unsorted part = A[3]
       <br />
       Minimum element of unsorted part = A[5]
       <br />
       We will swap A[3] and A[5] then, make A[3] part of sorted subarray.
-      <img src={six} />
+      <img className="h-32 m-5 " src={six} />
       Leftmost element of unsorted part = A[4]
       <br />
       Minimum element of unsorted part = A[7]
       <br />
       We will swap A[4] and A[7] then, make A[4] part of sorted subarray.
-      <img src={seven} />
+      <img className="h-32 m-5 " src={seven} />
       Leftmost element of unsorted part = A[5]
       <br />
       Minimum element of unsorted part = A[6]
       <br />
       We will swap A[5] and A[6] then, make A[5] part of sorted subarray.
-      <img src={eight} />
+      <img className="h-32 m-5 " src={eight} />
       Leftmost element of unsorted part = A[6]
       <br />
       Minimum element of unsorted part = A[7]
       <br />
       We will swap A[6] and A[7] then, make A[6] part of sorted subarray.
-      <img src={nine} />
+      <img className="h-32 m-5 " src={nine} />
       This is the final sorted array.
-      <div className="text-3xl py-5 text-yellow-100">Pseudocode</div>
+     
       <div className="text-2xl py-5 text-yellow-100">FindMinIndex:</div>
       Suppose, there are ‘n’ elements in the array. Therefore, at worst case,
       there can be n iterations in FindMinIndex() for start = 1 and end = n. We
